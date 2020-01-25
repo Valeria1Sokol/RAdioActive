@@ -465,7 +465,6 @@ footer .footerIcon_loc {
 
     #menuToggle {
         margin-top: 4.3vw;
-        : none;
         user-select: none;
     }
 
@@ -610,9 +609,8 @@ footer .footerIcon_loc {
     .desctop {
         display: none;
     }
-    
-    .header_center
-    {
+
+    .header_center {
         background-size: 98%;
     }
 
@@ -776,7 +774,7 @@ footer .footerIcon_loc {
         margin: 0vw 0 3vw;
         width: 65vw;
     }
-    
+
     .btn_menu_list .newsroom {
         font-size: 3.5vw;
         padding: 1vh 20.1vw;
@@ -825,8 +823,8 @@ footer .footerIcon_loc {
         transform: rotate(45deg) translate(11px, 14px);
 
     }
-      .header_center
-    {
+
+    .header_center {
         background-size: 95%;
     }
 

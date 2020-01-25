@@ -111,6 +111,12 @@ if (widthW <= '1023') {
         openB.find(".marie .touch").click(function () {
 
             if (k == 1) {
+                $('footer').animate({
+                   opacity:'0'
+                },500);
+                  $('#menuToggle').animate({
+                    opacity: '0'
+                },500);
                 $('.about_box_m').animate({
                     opacity: 1,
                 }, 500);
@@ -151,11 +157,23 @@ if (widthW <= '1023') {
                 $('.pierre').animate({
                     zIndex: '2'
                 });
+                 $('footer').animate({
+                    opacity: '1'
+                },500);
+                 $('#menuToggle').animate({
+                    opacity: '1'
+                },500);
                 k = 1;
             }
         });
         openB.find(".pierre .touchP").click(function () {
             if (k == 1) {
+                $('footer').animate({
+                   opacity:'0'
+                },500);
+                  $('#menuToggle').animate({
+                    opacity: '0'
+                },500);
                 $('.about_box_p').animate({
                     opacity: 1
                 }, 500)
@@ -196,6 +214,12 @@ if (widthW <= '1023') {
                 $('.marie').css({
                     zIndex: '2'
                 });
+                 $('footer').animate({
+                    opacity: '1'
+                },500);
+                 $('#menuToggle').animate({
+                    opacity: '1'
+                },500);
 
                 k = 1;
             }

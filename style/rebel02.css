@@ -157,12 +157,13 @@ footer {
         background-position: center;
         background-size: 101% 131%;
     }
+
     footer {
-    /* top: 91%; */
-    top: 0%;
-    z-index: 3;
-    position: relative;
-}
+        /* top: 91%; */
+        top: 0%;
+        z-index: 3;
+        position: relative;
+    }
 
     .main2 {
         flex-direction: column;
@@ -181,7 +182,7 @@ footer {
         font-family: 'SackersM';
         letter-spacing: 0.5vw;
         position: relative;
-        z-index: 1;
+        /*        z-index: 1;*/
     }
 
     .marie_pierre_box {
@@ -361,9 +362,12 @@ footer {
     }
 
     .shadowGreen2 {
-        width: 100vw;
-/*        height: 112vh;*/
-        background-position: left bottom;
+        width: 86vw;
+        position: absolute;
+        left: 24%;
+        background-size: 96%;
+        background-position: left center;
+        background-position: left 50%;
     }
 
     .closeBtn {
@@ -384,6 +388,9 @@ footer {
     .main2 {
         padding: 7vh 0 2vh;
     }
+    .shadowGreen2 {
+    left: 30%;
+}
 
     .main2 .main_h1 {
         padding: 0 9.7vw;
