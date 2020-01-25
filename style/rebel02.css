@@ -73,6 +73,8 @@ footer {
     footer {
         /*        top: 91%;*/
         z-index: 3;
+        position: relative;
+        top: 0;
     }
 
     .main2 .info {
@@ -119,7 +121,7 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        padding: 8vw 0 12vw;
+        padding: 8vw 0 3vw;
     }
 
     .main2 .main_h1 {
@@ -189,15 +191,16 @@ footer {
     }
 
     .main2 .about_box .about_Maria {
-        width: 100%;
+        width: 92%;
         height: 3.3vw;
+            margin-left: 3vw;
         background-image: url(../img/MSC_m.png);
         background-repeat: no-repeat;
         background-size: contain;
     }
 
     .main2 .info .about_box {
-        padding: 6.1vw 7.3vw;
+        padding: 4.1vw 6.3vw;
         border-radius: 16.5vw;
         z-index: 3;
     }
@@ -211,7 +214,7 @@ footer {
     }
 
     .main2 .about_box .about_p {
-        font-size: 2.5vw;
+        font-size: 2vw;
         font-weight: 300;
         letter-spacing: 0.5vw;
         line-height: 1.5;
@@ -228,7 +231,7 @@ footer {
         width: 50%;
         border-radius: 6.5vw;
         z-index: 0;
-        bottom:11%;
+        bottom: 11%;
         position: absolute;
         left: 50%;
         flex-direction: column;
@@ -266,7 +269,7 @@ footer {
         line-height: 1.7;
         margin: 0;
         padding-left: 4vw;
-/*        transition: 1s;*/
+        /*        transition: 1s;*/
     }
 
     .shadow,
@@ -304,20 +307,26 @@ footer {
         height: 9.3vw;
         margin: 0 0 3vw;
     }
+
+    .about_Pierre_m {
+        display: flex;
+        height: 7.3vw;
+        margin: 0 0 4vw;
+    }
+
     .shadowGreen2 {
-    width: 100vw;
-    height: 112vh;
-    background-position: left bottom;
-}
-    
-    .closeBtn
-    {
+        width: 100vw;
+        height: 112vh;
+        background-position: left bottom;
+    }
+
+    .closeBtn {
         width: 3vw;
         position: relative;
         left: 92%;
     }
-    .closeBtn img
-    {
+
+    .closeBtn img {
         width: 2.5vw;
         height: 2.5vw;
     }
@@ -327,7 +336,7 @@ footer {
 
 @media all and (max-width:425px) {
     .main2 {
-        padding: 18vw 0 19vw;
+        padding: 13vw 0 6vw;
     }
 
     .main2 .main_h1 {
@@ -346,10 +355,10 @@ footer {
     }
 
     .marie_pierre_box .marie {
-        padding: 56vw 0 0 8vw;
+        padding: 43vw 0 0 19vw;
     }
 
     .marie_pierre_box .pierre {
-        padding: 49vw 0 0;
+        padding: 30vw 0 0;
     }
 }

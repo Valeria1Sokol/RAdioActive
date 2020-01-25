@@ -207,8 +207,8 @@ section.modalWindow section.modalWrapper {
     .modalImg {
         background-repeat: no-repeat;
         background-size: cover;
-        width: 57%;
-        height: 75%;
+        width: 53%;
+        height: 64%;
         transition: all 2s;
     }
 
@@ -239,6 +239,7 @@ section.modalWindow section.modalWrapper {
         height: 97%;
         width: 100%;
         padding: 0 0 13vw;
+        border-radius: 4.2vw;
     }
 
     .modal .info {

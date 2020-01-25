@@ -198,7 +198,8 @@
 
  .about_Pierre {
     width: 73%;
-    height: ;
+  height: 3.5vw;
+    margin: 0 0 1vw;
     background-image: url(../img/PC.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -410,6 +411,9 @@ section > span {
 }
 
 @media all and (max-width:1024px) {
+    .container {
+    background-size: cover;
+}
     .main .main_box {
         flex-direction: column-reverse;
         margin-top: 2.5vw;
