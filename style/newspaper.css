@@ -184,6 +184,10 @@ section.modalWindow section.modalWrapper {
     width: 1.4vw;
 }
 
+.news_tittle {
+    display: none;
+}
+
 @media all and (max-width:768px) {
     section.modalWindow section.modalWrapper {
         flex-direction: column;
@@ -304,8 +308,47 @@ section.modalWindow section.modalWrapper {
         background-repeat: no-repeat;
         margin: 0 13vw 0 0;
     }
+
     .container {
-    background-image: url(../img/newspaper-sceneBg_m.png);
-}
+        background-image: url(../img/newspaper-sceneBg_m.png);
+    }
+
+    .news_tittle {
+        display: flex;
+        width: 53%;
+        font-size: 2.2vw;
+        color: white;
+        font-weight: 100;
+        letter-spacing: 0.5vw;
+        line-height: 2;
+        text-align: center;
+    }
+
+    .mob_poster {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .dot {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dot span {
+        width: 1vw;
+        height: 1vw;
+        border-radius: 50%;
+        background-color: #92c66a;
+        margin: 0 2vw 0 0;
+    }
+
+    .main {
+        flex-direction: column;
+            justify-content: space-between;
+        padding: 12vw 0 18vw;
+    }
 
 }

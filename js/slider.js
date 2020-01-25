@@ -1,6 +1,6 @@
 console.clear();
 
-var colorArray = [];
+var colorArray = ['transparent'];
 var slides = document.querySelectorAll("section");
 var container = document.querySelector("#panelWrap");
 var dur = 0.5;
