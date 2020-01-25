@@ -135,6 +135,7 @@
     align-items: center;
     justify-content: center;
     padding: 9vw 0 0 7vw;
+    transition: all 1s;
 }
 
 
@@ -188,16 +189,16 @@
 }
 
  .about_Maria {
-    width: 22.2vw;
-    height: 6.3vw;
+    width: 73%;
+    height: 90px;
     background-image: url(../img/MSC.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
 
  .about_Pierre {
-    width: 13vw;
-    height: 4.3vw;
+    width: 73%;
+    height: ;
     background-image: url(../img/PC.png);
     background-repeat: no-repeat;
     background-size: contain;

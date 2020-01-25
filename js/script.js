@@ -1,5 +1,7 @@
 var open = $(".main2");
 var widthW = window.innerWidth;
+var widthH = window.innerHeight;
+console.log(widthH);
 console.log(widthW);
 if (widthW >= '1024') {
     open.each(function () {
@@ -10,12 +12,23 @@ if (widthW >= '1024') {
                 if (widthW <= '1024') {
                     $('.about_box').animate({
                         padding: '3.1vw 5.4vw 18.1vw 6.5vw',
-                    }, 1000);
+                    }, 700);
                 } else {
                     $('.about_box').animate({
                         top: '0vw',
                         padding: '3.1vw 5.4vw 7.1vw 6.5vw',
-                    }, 1000);
+                    }, 700);
+                }
+                if (widthH <= '800') {
+                    $('.about_box').animate({
+                        padding: '3.1vw 5.4vw 5.1vw 6.5vw',
+                        top:'-4vw'
+                    }, 500);
+                } else {
+                    $('.about_box').animate({
+                        top: '0vw',
+                        padding: '3.1vw 5.4vw 7.1vw 6.5vw',
+                    }, 500);
                 }
                 $('.about_box').css({
                     zIndex: '3',
@@ -81,6 +94,17 @@ if (widthW >= '1024') {
                         top: '0vw',
                         padding: '3.1vw 5.4vw 10.1vw 6.5vw',
                     }, 1000);
+                }
+                 if (widthH <= '800') {
+                    $('.about_box').animate({
+                        padding: '3.1vw 5.4vw 8vw 6.5vw',
+                        top:'-4vw'
+                    }, 500);
+                } else {
+                    $('.about_box').animate({
+                        top: '0vw',
+                        padding: '3.1vw 5.4vw 7.1vw 6.5vw',
+                    }, 500);
                 }
                 $('.about_box').css({
                     zIndex: '3',
