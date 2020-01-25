@@ -25,17 +25,8 @@ btn00.onclick = function () {
     $('.dontGiveUp').css({
         display: 'none'
     })
-    $('.modal').css({
-        padding: '28% 9vw 0'
-    })
-     $('.closeBtn').css({
-        top: '32vw'
-    })
      $('.modalImg').css({
         backgroundImage: 'none',
-    });
-    $('.modal').css({
-        padding: '28% 9vw'
     });
 }
 btn11.onclick = function () {
@@ -51,12 +42,6 @@ btn11.onclick = function () {
     });
     $('.dontGiveUp').css({
         display: 'none'
-    })
-    $('.modal').css({
-        padding: '28% 9vw'
-    })
-     $('.closeBtn').css({
-        top: '33vw'
     })
      $('.modalImg').css({
         backgroundImage: 'none',

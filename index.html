@@ -5,9 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/header_footer.css">
     <link rel="stylesheet" href="./style/rebel.css">
+
+    <script src="./js/is.min.js"></script>
+    <script>
+        var link = document.createElement('link');
+        link.rel = "stylesheet";
+        if (is.safari() || is.ie()) {
+            link.href = "./style/safari.css";
+        }
+
+        document.head.appendChild(link);
+
+    </script>
     <title>RadioActive Movie</title>
 </head>
 
@@ -60,11 +73,9 @@
                         <li>
                             <div class="btn_menu_list">
                                 <input type="button" class="watch_trailer" value="WATCH TRAILER">
-                                <div>
-                                    <a href="#">
-                                        <input type="button" class="reserve" value="reserve tickets"></a>
-                                    <a href="newspaper.html">
-                                        <input type="button" class="newsroom" value="NEWSROOM"></a>
+                                <div class="res_news">
+                                    <div class="btnMenu reserve"><a href="#">reserve tickets</a></div>
+                                    <div class="btnMenu newsroom"><a href="newspaper.html">NEWSROOM</a></div>
                                 </div>
                             </div>
                         </li>
@@ -76,6 +87,7 @@
                     <p class="header_text">RESERVE TICKETS</p>
                 </div>
                 <div class="header_btn_box desctop">
+
                     <input type="button" class="header_btn" value="share">
                     <input type="button" class="header_btn" value="watch trailer">
                 </div>
@@ -108,4 +120,6 @@
         </footer>
     </div>
 
-</body></html>
+</body>
+
+</html>

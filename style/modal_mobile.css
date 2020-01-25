@@ -1,17 +1,19 @@
 .modalWindow {
     display: none;
+    justify-content: center;
+    align-items: center;
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
-    z-index: 7;
+    z-index: 8;
     /* Sit on top */
-    padding: 28% 9vw 0;
+    padding: 15% 9vw 0;
     /* Location of the box */
     left: 0;
     top: 0;
     width: 100%;
     /* Full width */
-    height: 100vh;
+    height: 100%;
     /* Full height */
     overflow: auto;
     /* Enable scroll if needed */
@@ -46,8 +48,8 @@
 
 .closeBtn {
     position: absolute;
-    right: -12%;
-    top: -14%;
+    right: 12%;
+    top: 15%;
     cursor: pointer;
     color: #93c469;
     font-size: 1.3vw;

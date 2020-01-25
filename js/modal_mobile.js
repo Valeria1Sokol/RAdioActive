@@ -29,18 +29,18 @@ btn0.onclick = function () {
     $('.dontGiveUp').css({
         display: 'none'
     })
-    $('.modal').css({
-        padding: '28% 9vw 0'
-    })
-    $('.closeBtn').css({
-        top: '32vw'
-    })
+//    $('.modal').css({
+//        padding: '28% 9vw 0'
+//    })
+//    $('.closeBtn').css({
+//        top: '32vw'
+//    })
     $('.modalImg').css({
         backgroundImage: 'none',
     });
-    $('.modal').css({
-        padding: '28% 9vw 0'
-    });
+//    $('.modal').css({
+//        padding: '2% 9vw 0'
+//    });
 }
 btn1.onclick = function () {
     modal.style.display = "block";
@@ -58,12 +58,6 @@ btn1.onclick = function () {
     });
     $('.dontGiveUp').css({
         display: 'none'
-    })
-    $('.modal').css({
-        padding: '28% 9vw 0'
-    })
-    $('.closeBtn').css({
-        top: '33vw'
     })
     $('.modalImg').css({
         backgroundImage: 'none',
