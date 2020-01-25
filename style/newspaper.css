@@ -117,6 +117,8 @@ section.modalWindow section.modalWrapper {
 .modalInfo {
     overflow: auto;
     height: 100%;
+        border-radius: 1.7vw;
+        border-radius: 1.7vw;
 }
 
 .modal .info p {
@@ -186,6 +188,10 @@ section.modalWindow section.modalWrapper {
 
 .news_tittle {
     display: none;
+}
+.mob_poster
+{
+    display: flex;
 }
 
 @media all and (max-width:768px) {
