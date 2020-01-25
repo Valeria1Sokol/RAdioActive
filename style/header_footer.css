@@ -1,0 +1,786 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/a_rebel_bgn.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 2.1vw;
+}
+
+#menuToggle {
+    margin-top: 2.3vw;
+    display: block;
+    z-index: 998;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.3s ease;
+}
+
+
+#menuToggle .menuCheck {
+    display: block;
+    width: 2.1vw;
+    height: 1.7vw;
+    position: absolute;
+    top: 2.1vw;
+    left: 2.03vw;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1000;
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+    display: block;
+    width: 2vw;
+    height: 1px;
+    margin-bottom: 10px;
+    position: relative;
+    background: #93c469;
+    z-index: 998;
+    transform-origin: 4px 0px;
+}
+
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+    width: 26px;
+}
+
+#menuToggle .center_span {
+    width: 1.7vw;
+}
+
+#menuToggle .last_span {
+    width: 1.4vw;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle .menuCheck:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(10px, 13px);
+    background: #93c469;
+    width: 15px;
+    height: 2px;
+    left: 0.8vw;
+    top: -0.8vw;
+    z-index: 999;
+}
+
+#menuToggle .menuCheck:checked ~ .center_span {
+    transform: rotate(-45deg) translate(-9px, 4px);
+}
+
+#menuToggle .menuCheck:checked ~ .m-menu__overlay {
+    display: block;
+}
+
+.m-menu__overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 998;
+    display: none;
+    transition: all 1s;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle .menuCheck:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle .menuCheck:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 6vw;
+    background-image: url(../img/bg_menu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    z-index: 998;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menuToggle .menuCheck:checked ~ ul {
+    transform: none;
+}
+
+.lg_tittle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 5.2vw 3.4vw;
+}
+
+.menu_lg {
+    font-size: 0.65vw;
+    color: #93c469;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.menu_lg_p {
+    font-size: 0.65vw;
+    color: #93c469;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 7px;
+}
+
+.menuList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: linear-gradient(-90deg, rgb(12, 74, 72, 0.46), rgb(14, 95, 92, 0.46));
+    padding: 1.3vw 6.2vw;
+    margin: 0 0 7px;
+}
+
+.menuList .note_p {
+    color: white;
+    font-size: 1.02vw;
+    /*    transition: all 0.5s;*/
+    letter-spacing: 0.46vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.menuList .note_p .circle {
+    width: 0.5vw;
+    height: 0.5vw;
+    margin: 0 1.1vw 0 0;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.menuList:hover .circle {
+    opacity: 1;
+}
+
+.menuList:hover .note_p {
+    font-weight: 900;
+}
+
+.menuList .tittle_p {
+    width: 87%;
+    font-size: 0.65vw;
+    color: #93c469;
+    font-weight: 500;
+    letter-spacing: 0.2vw;
+    text-transform: uppercase;
+    line-height: 1.6;
+    padding: 1.3vw 0 0 1.6vw;
+}
+
+#btn_watch {
+    background-color: #0c3336;
+
+    border-radius: 25px;
+    font-size: 0.53vw;
+    font-weight: 600;
+    color: #73bf8a;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 0.63vw 1.3vw 0.63vw 3.2vw;
+    margin: 1vw 1.6vw 0;
+    background-image: url(../img/vidicon.png);
+    background-repeat: no-repeat;
+    background-size: 9%;
+    background-position: 16%;
+}
+
+.btn_menu_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 1.8vw 0 0 7.9vw;
+}
+
+.btn_menu_list .watch_trailer {
+    color: #93c469;
+    border: 1px solid #93c469;
+    font-size: 0.64vw;
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 0.73vw 9.4vw;
+    margin: 0 0.8vw 0 0;
+    font-family: 'Avenir';
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.btn_menu_list .reserve {
+    color: #0c3336;
+    border: none;
+    font-size: 0.53vw;
+    background-color: #41ba86;
+    border-radius: 25px;
+    padding: 0.73vw 1.3vw;
+    margin: 1.7vw 0.8vw 0 0;
+    font-family: 'Avenir';
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.btn_menu_list .newsroom {
+    color: #93c468;
+    border: none;
+    font-size: 0.53vw;
+    background-color: #0c3336;
+    border-radius: 25px;
+    padding: 0.73vw 2.3vw;
+    margin: 1.7vw 0 0;
+    font-family: 'Avenir';
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: url(../img/line.png);
+    background-repeat: no-repeat;
+    background-size: 58%;
+    background-position: 49% 100%;
+    cursor: pointer;
+}
+
+
+.header_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header_center {
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/center_menu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1.5vw 8.6vw;
+    margin-right: 14vw;
+}
+
+.header_center .header_text {
+    font-size: 0.8vw;
+    color: #0e4a4f;
+    letter-spacing: 5px;
+    font-family: 'Avenir';
+    font-weight: 600;
+}
+
+.header_btn_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2.3vw 0 0;
+}
+
+.header_btn_box .header_btn {
+    color: #93c469;
+    border: 1px solid #93c469;
+    font-size: 0.73vw;
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 0.73vw 1.8vw;
+    margin: 0 20px 0 0;
+    font-family: 'Avenir';
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.header_btn_box .header_btn:last-of-type {
+    margin: 0;
+}
+
+footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.1vw 2.3vw;
+}
+
+footer .footerIcon_Sound {
+    width: 2.4vw;
+}
+
+footer .footerIcon_loc {
+    width: 1.7vw;
+}
+
+.mobile {
+    display: none;
+}
+
+.desctop {
+    display: flex;
+}
+
+.header_btn_box_m {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%
+}
+
+.header_btn_box_m .greenDot {
+    width: 0.8vw;
+    height: 0.8vw;
+    background-color: #93c469;
+    border-radius: 50%;
+    margin: 0 0 0.8vw;
+}
+
+
+
+@media all and (max-width:1440px) {
+    .menuList .tittle_p {
+        width: 89%;
+    }
+
+    .header_center {
+        margin-right: 12vw;
+    }
+
+}
+
+@media all and (max-width:1024px) {
+    header {
+        padding: 0 5.1vw;
+    }
+
+    .header_btn_box {
+        display: none;
+        padding: 0;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    #menuToggle {
+        margin-top: 4.3vw;
+        : none;
+        user-select: none;
+    }
+
+    .header_center {
+        margin-right: 0;
+    }
+
+    #menuToggle .menuCheck {
+        display: block;
+        width: 7.4vw;
+        height: 3.7vw;
+        top: 2.1vw;
+        left: 4.1vw;
+    }
+
+    #menuToggle span {
+        width: 6vw;
+        height: 3px;
+        margin-bottom: 12px;
+    }
+
+    #menuToggle .center_span {
+        width: 4.5vw;
+    }
+
+    #menuToggle .last_span {
+        width: 3vw;
+    }
+
+    .header_center .header_text {
+        font-size: 1.5vw;
+        font-weight: 900;
+
+    }
+
+    .header_center {
+        padding: 3.5vw 17.6vw;
+    }
+
+    .header_btn_box .header_btn {
+        font-size: 1.6vw;
+        border-radius: 4vw;
+        padding: 1.3vw 3.8vw;
+        margin: 0;
+        font-weight: 300;
+    }
+
+    footer .footerIcon_Sound {
+        width: 4vw;
+    }
+
+    footer .footerIcon_loc {
+        width: 3vw;
+    }
+
+    footer {
+        padding: 0 5.1vw 4.3vw;
+    }
+
+    #menu {
+        width: 100%;
+        padding-top: 5vw;
+    }
+
+    .menu_lg {
+        font-size: 2vw;
+        letter-spacing: 0.5vw;
+        font-weight: 300;
+    }
+
+    .menu_lg_p {
+        font-size: 2vw;
+        letter-spacing: 0.5vw;
+    }
+
+    #menuToggle .menuCheck:checked ~ span {
+        transform: rotate(45deg) translate(10px, 12px);
+        width: 2vw;
+        height: 3px;
+    }
+
+    .lg_tittle {
+        padding: 0 11.3vw 2.4vw;
+    }
+
+    .menuList .note_p {
+        font-size: 1.8vw;
+    }
+
+    .menuList {
+        padding: 2vw 8.8vw;
+        margin: 0 0 7px;
+    }
+
+    .menuList .tittle_p {
+        width: 49%;
+        font-size: 1vw;
+        letter-spacing: 0.5vw;
+        padding: 1.3vw 0 0 2.4vw;
+    }
+
+    #btn_watch {
+        position: absolute;
+        right: 0;
+        border-radius: 6vw 0 0 6vw;
+        font-size: 1.3vw;
+        padding: 3vw 4.3vw 3vw 8.2vw;
+        margin: 0;
+    }
+
+    .menuList .note_p .circle {
+        width: 1.2vw;
+        height: 1.2vw;
+    }
+
+    .btn_menu_list div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn_menu_list .watch_trailer,
+    .btn_menu_list .reserve,
+    .btn_menu_list .newsroom {
+        font-size: 2.5vw;
+        border-radius: 6vw;
+        padding: 1vw 21.4vw;
+        margin: 0vw 0 0.5vw;
+        letter-spacing: 0.5vw;
+    }
+
+    .btn_menu_list .reserve {
+        padding: 1vw 20.1vw;
+    }
+
+    .btn_menu_list .newsroom {
+        padding: 1vw 24.6vw;
+        background-image: none;
+    }
+
+    .desctop {
+        display: none;
+    }
+
+
+}
+
+@media all and (max-width:768px) {
+    #menuToggle .menuCheck {
+        height: 4.7vw;
+    }
+
+    .menuList .note_p {
+        font-size: 2.8vw;
+    }
+
+    .menuList .tittle_p {
+        width: 66%;
+        font-size: 1.6vw;
+        letter-spacing: 0.5vw;
+        padding: 1.3vw 0 0 2.4vw;
+    }
+
+    #btn_watch {
+        border-radius: 6vw 0 0 6vw;
+        font-size: 1.6vw;
+        padding: 4vw 3.3vw 4vw 8.2vw;
+    }
+
+    .menuList {
+        padding: 3vw 8.8vw;
+    }
+
+    #menu {
+        padding-top: 7vw;
+    }
+
+    .lg_tittle {
+        padding: 0 11.3vw 3.4vw;
+    }
+
+    .btn_menu_list .watch_trailer,
+    .btn_menu_list .reserve,
+    .btn_menu_list .newsroom {
+        margin: 0vw 0 1.5vw;
+    }
+
+    #menuToggle .menuCheck:checked ~ span {
+        transform: rotate(45deg) translate(13px, 14.5px);
+    }
+
+    #menuToggle {
+        margin-top: 3.5vw;
+    }
+}
+
+@media all and (max-width:425px) {
+    .header_center .header_text {
+        font-size: 2vw;
+    }
+
+    .header_btn_box_m .greenDot {
+        width: 1.4vw;
+        height: 1.4vw;
+        margin: 0 0 1.4vw;
+    }
+
+    #menuToggle span {
+        width: 9vw;
+        height: 3px;
+        margin-bottom: 8px;
+    }
+
+    #menuToggle .center_span {
+        width: 6.8vw;
+    }
+
+    #menuToggle .last_span {
+        width: 4.7vw;
+    }
+
+    #menuToggle .menuCheck {
+        height: 6.7vw;
+        width: 10.4vw;
+    }
+
+    .header_center {
+        padding: 2.8vw 17.6vw 3.5vw;
+    }
+
+    .header_btn_box .header_btn {
+        font-size: 2.6vw;
+        border-radius: 8vw;
+        padding: 2.3vw 6.8vw;
+        margin: 0;
+        font-weight: 300;
+    }
+
+    footer .footerIcon_loc {
+        width: 5vw;
+    }
+
+    footer .footerIcon_Sound {
+        width: 6vw;
+    }
+
+    footer {
+        padding: 0 5.1vw 6.3vw;
+    }
+
+    #menu {
+        padding-top: 14vw;
+    }
+
+    .menu_lg,
+    .menu_lg_p {
+        font-size: 2.5vw;
+    }
+
+    .lg_tittle {
+        padding: 0 11.3vw 7.4vw;
+    }
+
+    .menuList .note_p {
+        font-size: 3.5vw;
+    }
+
+    .menuList .tittle_p {
+        width: 69%;
+        font-size: 1.82vw;
+        letter-spacing: 0.5vw;
+        padding: 2.3vw 0 0 2.4vw;
+    }
+
+    .menuList {
+        padding: 7vw 8.8vw;
+    }
+
+    #btn_watch {
+        border-radius: 7vw 0 0 7vw;
+        font-size: 2vw;
+        padding: 4vw 3.3vw 4vw 9.2vw;
+        background-position: 16%
+    }
+
+    .btn_menu_list .watch_trailer,
+    .btn_menu_list .reserve,
+    .btn_menu_list .newsroom {
+        font-size: 3.5vw;
+        border-radius: 6vw;
+        padding: 2vw 20.4vw;
+        margin: 0vw 0 3vw;
+    }
+
+    .btn_menu_list {
+        margin: 6.8vw 0 0 10.9vw;
+    }
+
+    .btn_menu_list .reserve {
+        padding: 2vw 19vw;
+    }
+
+    .btn_menu_list .newsroom {
+        padding: 2vw 24.6vw;
+        background-image: none;
+    }
+
+    #menuToggle .menuCheck:checked ~ span {
+        transform: rotate(45deg) translate(9.5px, 12.5px);
+        width: 3vw;
+        height: 2px;
+    }
+
+}
+
+@media all and (max-width:414px) {
+    #menuToggle .menuCheck:checked ~ span {
+        transform: rotate(45deg) translate(10px, 13px);
+
+    }
+}
+
+@media all and (max-width:375px) {
+    #menuToggle .menuCheck:checked ~ span {
+        transform: rotate(45deg) translate(10.5px, 13.5px);
+    }
+
+    #btn_watch {
+        margin-top: 1vw;
+    }
+}
+
+@media all and (max-width:325px) {
+    #menuToggle .menuCheck:checked ~ span {
+        transform: rotate(45deg) translate(11px, 14px);
+
+    }
+}

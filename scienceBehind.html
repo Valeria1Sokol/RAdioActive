@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/utils/Draggable.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ThrowPropsPlugin.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/header_footer.css">
+    <link rel="stylesheet" href="./style/modal_mobile.css">
+    <link rel="stylesheet" href="./style/behind.css">
+
+
+
+    <title>RadioActive Movie</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav role="navigation" class="nav_menu">
+                <div id="menuToggle">
+                    <input type="checkbox" / class="menuCheck">
+                    <span></span>
+                    <span class="center_span"></span>
+                    <span class="last_span"></span>
+                    <label class="m-menu__overlay"></label>
+                    <ul id="menu">
+                        <li>
+                            <div class="lg_tittle">
+                                <p class="menu_lg">Select a language</p>
+                                <p class="menu_lg_p">ENG</p>
+                                <p class="menu_lg"> | </p>
+                                <p class="menu_lg_p">FRA</p>
+                            </div>
+                        </li>
+                        <a href="index.html">
+                            <li>
+                                <div class="menuList">
+                                    <p class="note_p"><img class="circle" src="./img/Ellipse.png">A REBEL IN HER ELEMENT</p>
+                                    <p class="tittle_p">MARIE SKŁODOWSKA CURIE - A PIONEER WHO REVOLUTIONISED SCIENCE - STARTED A CHAIN REACTION WHICH SHAPED THE 20TH CENTRURY. FIND OUT HOW. </p>
+                                    <input type="button" value="watch now" id="btn_watch">
+                                </div>
+                            </li>
+                        </a>
+                        <a href="scienceBehind.html">
+                            <li>
+                                <div class="menuList">
+                                    <p class="note_p"><img class="circle" src="./img/Ellipse.png">the science behind</p>
+                                    <p class="tittle_p">WHAT IS RADIOACTIVITY AND HOW DID IT CARVE OUT MARIE CURIE'S PLACE IN SCIENTIFIC HISTORY? DIVE INTO THE SCIENCE. </p>
+                                    <input type="button" value="watch now" id="btn_watch">
+                                </div>
+                            </li>
+                        </a>
+                        <a href="impact.html">
+                            <li>
+                                <div class="menuList">
+                                    <p class="note_p"><img class="circle" src="./img/Ellipse.png">impacts and consequences</p>
+                                    <p class="tittle_p">MARIE CURIE'S WORK HAS TAKEN US INTO A BRAVE NEW WORLD.<br class="desctop"> SEE HOW THE IMPACTS OF HER DISCOVERIES ARE STILL FELT TODAY. </p>
+                                    <input type="button" value="watch now" id="btn_watch">
+                                </div>
+                            </li>
+                        </a>
+                        <li>
+                            <div class="btn_menu_list">
+                                <input type="button" class="watch_trailer" value="WATCH TRAILER">
+                                <div>
+                                    <a href="#">
+                                        <input type="button" class="reserve" value="reserve tickets"></a>
+                                    <a href="newspaper.html">
+                                        <input type="button" class="newsroom" value="NEWSROOM"></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header_container">
+                <div class="header_center">
+                    <p class="header_text">RESERVE TICKETS</p>
+                </div>
+                <div class="header_btn_box desctop">
+                    <input type="button" class="header_btn" value="share">
+                    <input type="button" class="header_btn" value="watch trailer">
+                </div>
+
+            </div>
+            <div class="header_btn_box_m mobile">
+                <span class="greenDot"></span>
+                <span class="greenDot"></span>
+                <span class="greenDot"></span>
+            </div>
+        </header>
+        <div class="hideMe">
+            <svg id="leftArrow" class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <g stroke-linejoin="round" stroke-linecap="round">
+                    <circle r="46" cx="50" cy="50" />
+                    <polyline points="60 25, 30 50, 60 75"></polyline>
+                </g>
+            </svg>
+            <svg id="rightArrow" class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <g stroke-linejoin="round" stroke-linecap="round">
+                    <circle r="46" cx="50" cy="50" />
+                    <polyline points="40 25, 70 50, 40 75"></polyline>
+                </g>
+            </svg>
+            <div id="masterWrap">
+                <div id="panelWrap">
+                    <section class="main" style="background-image: url(./img/behindBg_1.png);">
+                        <div class="beh_tittle">
+                            <h1 class="main_h1">THE SCIENCE BEHIND</h1>
+                            <p class="main_tittle">WHAT IS RADIOACTIVITY AND HOW DID IT CARVE OUT MARIE CURIE'S PLACE IN SCIENTIFIC HISTORY? DIVE <br>INTO THE SCIENCE.</p>
+                        </div>
+                        <div class="main_box">
+                            <div class="video">
+                                <img class="close" src="img/x.png" alt=""> <input type="button" class="play" value="">
+                            </div>
+                        </div>
+
+                    </section>
+                    <section class="main" style="background-image: url(./img/behindBg_1.png);">
+                        <h1 class="main_h1">THE SCIENCE BEHIND</h1>
+                        <div class="contant_box">
+                            <img src="img/icon1.png" class="behind_icon">
+                            <h1 class="contant_h">PAY ATTENTION</h1>
+                            <p class="contant_text">IN 1895, WILHELM ROENTGEN FOUND A NEW KIND OF RADIATION (NAMED <br>'X-RAYS') WHICH COULD PASS THROUGH SOLID OBJECTS. A YEAR LATER<br>, HENRI BECQUEREL NOTICED THAT URANIUM GAVE OFF ANOTHER KIND OF<br> INVISIBLE RAYS. MARIE, BECQUEREL'S STUDENT, WAS PAYING ATTENTION:<br> <span>WHILE EVERYONE ELSE TALKED ABOUT X-RAYS, SHE KNEW THAT BECQUEREL'S RAYS COULD MEAN BIG THINGS.</span>
+                            </p>
+                            <input type="button" class="discover" value="discover more">
+                        </div>
+                    </section>
+                    <section class="main" style="background-image: url(./img/behindBg_1.png);">
+                        <h1 class="main_h1">THE SCIENCE BEHIND</h1>
+                        <div class="contant_box_bottom">
+                            <img src="img/icon2.png" class="behind_icon">
+                            <h1 class="contant_h">CHALLENGE EVERYTHING</h1>
+                            <p class="contant_text">TESTING EVERY ELEMENT WITH AN ELECTROMETER INVENTED BY PIERRE, MARIE FOUND THAT THORIUM ALSO GAVE OUT BECQUEREL RAYS. SHE CAME UP WITH A REVOLUTIONARY THEORY: <span>THE RAYS CAME FROM SOMETHING THAT WAS HAPPENING INSIDE THE URANIUM AND THORIUM ATOMS THEMSELVES.</span>
+                            </p>
+                        </div>
+                        <div class="contant_box_top">
+                            <h1 class="contant_h">HOW RADIOACTIVITY WORKS </h1>
+                            <p class="contant_text">The nucleus at the centre of an atom is made <br> up of protons and neutrons and has a positive electrical charge, while the electrons – <br>which circle around the nucleus - have a negative charge.
+                            </p>
+                            <input type="button" class="discover" value="discover more">
+                        </div>
+                    </section>
+                    <section class="main" style="background-image: url(./img/behindBg_1.png);">
+                        <h1 class="main_h1">THE SCIENCE BEHIND</h1>
+                        <div class="contant_box contant_box3">
+                            <img src="img/icon3.png" class="behind_icon">
+                            <h1 class="contant_h">cause a stir</h1>
+                            <p class="contant_text">The next step was to study a mineral called pitchblende, which contained uranium ore, but oddly was more radioactive than uranium itself. Stirring huge vats in the ‘miserable old shed’ that was their laboratory, the Curies managed to extract a black powder 330x more radioactive than uranium.
+
+                            </p>
+                            <input type="button" class="discover" value="discover more">
+                        </div>
+                    </section>
+                    <section class="main" style="background-image: url(./img/behindBg_1.png);">
+                        <h1 class="main_h1">THE SCIENCE BEHIND</h1>
+                        <div class="contant_box contant_box4">
+                            <img src="img/icon3.png" class="behind_icon">
+                            <h1 class="contant_h">DON’T GIVE UP </h1>
+                            <p class="contant_text">Even with the polonium taken out, the remaining liquid was still suspiciously radioactive. A second element was lurking in there. Getting a sample was back-breaking work.
+                            </p>
+                            <input type="button" class="discover" value="discover more">
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+            <div class="dots_box">
+                <div class="dots_text">
+                    <p>Watch</p>
+                    <p>TOUCH</p>
+                    <p>TOUCH</p>
+                    <p>TOUCH</p>
+                    <p>TOUCH</p>
+                </div>
+                <div class="dots"></div>
+            </div>
+        </div>
+        <div class="main_Behind">
+            <div class="beh_tittle">
+                <h1 class="main_h1">THE SCIENCE BEHIND</h1>
+                <p class="main_tittle">WHAT IS RADIOACTIVITY AND HOW DID IT CARVE OUT MARIE CURIE'S PLACE IN SCIENTIFIC HISTORY?</p>
+            </div>
+            <div class="dots_box">
+                <div class="dots_text">
+                    <p>Watch</p>
+                    <p>TOUCH</p>
+                    <p>TOUCH</p>
+                    <p>TOUCH</p>
+                    <p>TOUCH</p>
+                </div>
+                <div class="dots">
+                    <img src="./img/play-button-outline.png" class="dot" id="dot0">
+                    <img src="./img/touchImg.png" class="dot" id="dot1">
+                    <img src="./img/touchImg.png" class="dot" id="dot2">
+                    <img src="./img/touchImg.png" class="dot" id="dot3">
+                    <img src="./img/touchImg.png" class="dot" id="dot4">
+                </div>
+            </div>
+        </div>
+        <div class="modal modalWindow" id="myModal">
+           <div class="main_box">
+                <div class="video">
+                    <img class="close" src="img/x.png" alt=""> <input type="button" class="play" value="">
+                </div>
+            </div>
+            <div class="contant_box pay">
+                <img src="img/icon1.png" class="behind_icon">
+                <h1 class="contant_h">PAY ATTENTION</h1>
+                <p class="contant_text">IN 1895, WILHELM ROENTGEN FOUND A NEW KIND OF RADIATION (NAMED 'X-RAYS') WHICH COULD PASS THROUGH SOLID OBJECTS. A YEAR LATER, HENRI BECQUEREL NOTICED THAT URANIUM GAVE OFF ANOTHER KIND OF INVISIBLE RAYS. MARIE, BECQUEREL'S STUDENT, WAS PAYING ATTENTION: <span>WHILE EVERYONE ELSE TALKED ABOUT X-RAYS, SHE KNEW THAT BECQUEREL'S RAYS COULD MEAN BIG THINGS.</span>
+                </p>
+                <input type="button" class="discover" value="discover more">
+            </div>
+            <div class="contant_box challenge">
+                <img src="img/icon2.png" class="behind_icon">
+                <h1 class="contant_h">CHALLENGE EVERYTHING</h1>
+                <p class="contant_text">TESTING EVERY ELEMENT WITH AN ELECTROMETER INVENTED BY PIERRE, MARIE FOUND THAT THORIUM ALSO GAVE OUT BECQUEREL RAYS. SHE CAME UP WITH A REVOLUTIONARY THEORY: <span>THE RAYS CAME FROM SOMETHING THAT WAS HAPPENING INSIDE THE URANIUM AND THORIUM ATOMS THEMSELVES.</span>
+                </p>
+                <h1 class="contant_h">HOW RADIOACTIVITY WORKS </h1>
+                <p class="contant_text">The nucleus at the centre of an atom is made up of protons and neutrons and has a positive electrical charge, while the electrons – which circle around the nucleus - have a negative charge.
+                </p>
+                <input type="button" class="discover" value="discover more">
+            </div>
+            <div class="contant_box cause">
+                <img src="img/icon3.png" class="behind_icon">
+                <h1 class="contant_h">cause a stir</h1>
+                <p class="contant_text">The next step was to study a mineral called pitchblende, which contained uranium ore, but oddly was more radioactive than uranium itself. Stirring huge vats in the ‘miserable old shed’ that was their laboratory, the Curies managed to extract a black powder 330x more radioactive than uranium.
+                </p>
+                <input type="button" class="discover" value="discover more">
+            </div>
+            <div class="contant_box dontGiveUp">
+                <img src="img/icon3.png" class="behind_icon">
+                <h1 class="contant_h">DON’T GIVE UP </h1>
+                <p class="contant_text">Even with the polonium taken out, the remaining liquid was still suspiciously radioactive. A second element was lurking in there. Getting a sample was back-breaking work.
+                </p>
+                <input type="button" class="discover" value="discover more">
+            </div>
+            <div class="modalImg"></div>
+
+            <a class="closeBtn" id="btnClose"><img src="./img/x.png"></a>
+        </div>
+        <div class="modal overlay"></div>
+
+        <footer>
+            <img src="img/SOUND-ON.png" alt="" class="footerIcon_Sound">
+            <div class="header_btn_box mobile">
+                <input type="button" class="header_btn" value="watch trailer">
+            </div>
+            <img src="img/location-bug.png" alt="" class="footerIcon_loc">
+        </footer>
+
+
+    </div>
+    <script src="./js/slider.js"></script>
+    <script src="./js/modal_mobile.js"></script>
+</body>
+
+</html>

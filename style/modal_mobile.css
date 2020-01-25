@@ -1,0 +1,61 @@
+.modalWindow {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 7;
+    /* Sit on top */
+    padding: 28% 9vw 0;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100vh;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black w/ opacity */
+/*    transition: all 2s;*/
+}
+
+.modal.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 998;
+    cursor: pointer;
+}
+
+.modalWindow .modalWrapper {
+    padding: 1vw;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.closeBtn {
+    position: absolute;
+    right: -12%;
+    top: -14%;
+    cursor: pointer;
+    color: #93c469;
+    font-size: 1.3vw;
+}
+
+
+@media all and (max-width:768px) {
+    
+ 
+}
+

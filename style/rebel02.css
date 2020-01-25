@@ -1,0 +1,355 @@
+footer {
+    position: fixed;
+    top: 93%;
+}
+
+.container {
+    background-image: url(../img/Rebel2_bg2.png);
+    background-position: top;
+    /*    background-size: 105% 100%*/
+}
+
+.mobile_r {
+    display: none !important;
+}
+
+.desctop_r {
+    display: flex !important;
+}
+
+.main2 .info {
+    height: 69%;
+    width: 49%;
+}
+
+.about_box_m,
+.about_box_p {
+    display: none;
+}
+
+@media all and (max-width:1024px) {
+    .container {
+        background-position: 20%;
+    }
+
+    .marie_pierre_box {
+        width: 71%;
+        height: 106%;
+        position: relative;
+        left: 1.6vw;
+    }
+
+    .marie_pierre_box .marie {
+        left: 4.1vw;
+        top: -2.1vw;
+        position: relative;
+        z-index: 3;
+        width: 55.2vw;
+        height: 100%;
+        margin: 0;
+        padding: 13vw 0 0 8vw;
+        background-size: 96.5% 101%;
+    }
+
+    .marie_pierre_box .pierre {
+        position: relative;
+        z-index: 3;
+        width: 50vw;
+        height: 99%;
+        left: -3vw;
+        padding: 7vw 3vw 0 0;
+        background-size: 100% 100%;
+
+    }
+
+    .main2 .about_box .about_Maria {
+        width: 26.2vw;
+        height: 8.3vw;
+        background-image: url(../img/MSC.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    footer {
+        /*        top: 91%;*/
+        z-index: 3;
+    }
+
+    .main2 .info {
+        height: 74%;
+        width: 43%;
+        position: absolute;
+        right: 0;
+    }
+
+    .main2 {
+        justify-content: flex-start;
+    }
+
+    .main2 .info .about_box {
+        padding: 3.1vw 1.4vw 3.1vw 15.5vw;
+    }
+
+    .main2 .info .main_h1 {
+        margin: 0 0 8vw;
+    }
+
+    .shadowGreen2 {
+        width: 100vw;
+        height: 112vh;
+        background-position: right;
+    }
+
+    .shadowGreen {
+        background-position: -7% 123%;
+        width: 57vw;
+        height: 80vh;
+    }
+
+}
+
+@media all and (max-width:768px) {
+    .container {
+        background-image: url(../img/Rebel2_bg_m.png);
+        background-position: center;
+        background-size: 101% 131%;
+    }
+
+    .main2 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8vw 0 12vw;
+    }
+
+    .main2 .main_h1 {
+        padding: 0 22.7vw;
+        line-height: 1.5;
+        font-size: 3.7vw !important;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-family: 'SackersM';
+        letter-spacing: 0.5vw;
+        position: relative;
+        z-index: 1;
+    }
+
+    .marie_pierre_box {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0%;
+        top: 2vw;
+    }
+
+
+    .marie_pierre_box .marie {
+        width: 61.3vw;
+        height: 100%;
+        padding: 27vw 0 0 19vw;
+        background-size: 104% 75%;
+        left: 3.4vw;
+        top: -0.1vw;
+        z-index: 2;
+    }
+
+    .marie_pierre_box .pierre {
+        width: 44vw;
+        height: 100%;
+        left: -3.2%;
+        top: -0.6vw;
+        padding: 23vw 0 0;
+        background-size: 100% 70%;
+        z-index: 2;
+        transition: all .3s;
+
+    }
+
+    .marie_pierre_box .touch {
+        width: 7.5vw;
+    }
+
+    .marie_pierre_box .touch_p {
+        font-size: 2vw;
+        font-weight: 400;
+    }
+
+
+    .main2 .info {
+        height: fit-content;
+        width: 100%;
+        padding: 0 3vw;
+        position: relative;
+        /*        z-index: 0;*/
+    }
+
+    .main2 .about_box .about_Maria {
+        width: 100%;
+        height: 3.3vw;
+        background-image: url(../img/MSC_m.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .main2 .info .about_box {
+        padding: 6.1vw 7.3vw;
+        border-radius: 16.5vw;
+        z-index: 3;
+    }
+
+    .mobile_r {
+        display: flex !important;
+    }
+
+    .desctop_r {
+        display: none !important;
+    }
+
+    .main2 .about_box .about_p {
+        font-size: 2.5vw;
+        font-weight: 300;
+        letter-spacing: 0.5vw;
+        line-height: 1.5;
+        margin: 0;
+        padding-left: 4vw;
+    }
+
+    .about_box_m,
+    .about_box_p {
+        display: flex;
+    }
+
+    .about_box_m {
+        width: 50%;
+        border-radius: 6.5vw;
+        z-index: 0;
+        bottom:11%;
+        position: absolute;
+        left: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #00393a;
+        padding: 3.1vw 3.3vw 3.1vw 3.7vw;
+        opacity: 0;
+
+    }
+
+    .about_box_p {
+        width: 50%;
+        border-radius: 6.5vw;
+        z-index: 0;
+        bottom: 9%;
+        position: absolute;
+        left: 8%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #00393a;
+        padding: 3.1vw 3.3vw 3.1vw 3.7vw;
+        opacity: 0;
+
+    }
+
+    .about_p {
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.5vw;
+        font-weight: 300;
+        letter-spacing: 0.5vw;
+        line-height: 1.7;
+        margin: 0;
+        padding-left: 4vw;
+/*        transition: 1s;*/
+    }
+
+    .shadow,
+    .shadowGreen,
+    .shadowGreen2 {
+        z-index: 1;
+    }
+
+    .about_tittle {
+        font-size: 1.9vw;
+        font-weight: 500;
+        letter-spacing: 0.6vw;
+
+    }
+
+    .about_p2 {
+        font-size: 1.9vw;
+        font-weight: 100;
+        letter-spacing: 0.5vw;
+        line-height: 1.5;
+        margin: 2vw 0 0;
+    }
+
+    .header_btn {
+        font-size: 1.7vw;
+        border-radius: 4.3vw;
+        padding: 1.73vw 4.8vw;
+        font-weight: 100;
+        letter-spacing: 0.5vw;
+        margin-left: 6vw;
+    }
+
+    .about_Maria {
+        width: 101%;
+        height: 9.3vw;
+        margin: 0 0 3vw;
+    }
+    .shadowGreen2 {
+    width: 100vw;
+    height: 112vh;
+    background-position: left bottom;
+}
+    
+    .closeBtn
+    {
+        width: 3vw;
+        position: relative;
+        left: 92%;
+    }
+    .closeBtn img
+    {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+
+
+}
+
+@media all and (max-width:425px) {
+    .main2 {
+        padding: 18vw 0 19vw;
+    }
+
+    .main2 .main_h1 {
+        padding: 0 9.7vw;
+        line-height: 1.5;
+        font-size: 6.7vw !important;
+    }
+
+    .marie_pierre_box .touch {
+        width: 9vw;
+    }
+
+    .marie_pierre_box .touch_p {
+        font-size: 3vw;
+        font-weight: 400;
+    }
+
+    .marie_pierre_box .marie {
+        padding: 56vw 0 0 8vw;
+    }
+
+    .marie_pierre_box .pierre {
+        padding: 49vw 0 0;
+    }
+}

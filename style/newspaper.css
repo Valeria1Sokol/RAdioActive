@@ -1,0 +1,311 @@
+@font-face {
+    font-family: 'Storyteller';
+    src: url("../font/Storyteller.otf") format("opentype");
+}
+
+.container {
+    background-image: url(../img/newspaper-sceneBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main .poster {
+    cursor: pointer;
+    width: 15vw;
+    height: 19vw;
+}
+
+.main .posterL {
+    margin: 1vw -0.6vw 0 0vw;
+}
+
+.main .posterC {
+    width: 13.6vw;
+    height: 19vw;
+    margin-top: 6vw;
+}
+
+.main .posterR {
+    margin: 1vw 0vw 0 -0.6vw;
+}
+
+
+section.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+}
+
+section.modalWindow {
+    display: none;
+    position: fixed;
+    left: 13%;
+    top: 15%;
+    z-index: 999 !important;
+    width: 75%;
+    height: 75%;
+    background: transparent;
+    cursor: default;
+}
+
+section.modal.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 998;
+    cursor: pointer;
+}
+
+section.modalWindow section.modalWrapper {
+    padding: 1vw;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.closeBtn {
+    position: absolute;
+    right: -12%;
+    top: -14%;
+    cursor: pointer;
+    color: #93c469;
+    font-size: 1.3vw;
+}
+
+.modalImg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 28vw;
+    height: 38vw;
+    transition: all 2s;
+}
+
+.modal ul {
+    list-style: none;
+    min-height: 15vw;
+}
+
+.modal .info {
+    display: none;
+    background-color: #0b3a3a;
+    width: 30.5vw;
+    height: 32.2vw;
+    flex-direction: column;
+    padding: 4vw 4.5vw 5vw;
+    border-radius: 0 0 2.7vw 2.7vw;
+}
+
+.modalInfo {
+    overflow: auto;
+    height: 100%;
+}
+
+.modal .info p {
+    font-size: 0.9vw;
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.4vw;
+    line-height: 1.6;
+    overflow: auto;
+    height: 100%;
+}
+
+.modal .active {
+    display: block;
+}
+
+.modal .infoHeader {
+    width: 30.5vw;
+    height: 5vw;
+    background-color: #0b3a3a;
+    border-radius: 1.7vw;
+    margin: 0 0 -2.5vw;
+    box-shadow: 0px -3px 30px 4px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw 2.9vw;
+    transition: all 0.8s;
+    font-family: 'Storyteller';
+}
+
+
+.modal .h1 {
+    font-size: 1.3vw;
+    color: #93c469;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+    text-align: left;
+    padding: 0 2vw 0vw;
+    transition: all 0.8s;
+    line-height: 1.5;
+}
+
+.modal .headerIngredient {
+    color: #6d9b5a;
+    font-size: 0.6vw;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+    text-align: left;
+}
+
+.modal .infoC .info {
+    height: 27vw;
+}
+
+.modal .infoR .info {
+    height: 18vw;
+}
+
+.modal .arrow {
+    width: 1.4vw;
+}
+
+@media all and (max-width:768px) {
+    section.modalWindow section.modalWrapper {
+        flex-direction: column;
+    }
+
+    .main .poster {
+        width: 36vw;
+        height: 51vw;
+    }
+
+    .modalImg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 57%;
+        height: 75%;
+        transition: all 2s;
+    }
+
+    section.modalWindow {
+        top: 4%;
+        height: 100%;
+    }
+
+    .modal ul {
+        width: 100%;
+    }
+
+    .modal .infoHeader {
+        width: 100%;
+        height: 16vw;
+        background-color: #0b3a3a;
+        border-radius: 4.2vw;
+        margin: 0 0 -6.5vw;
+        padding: 0 6vw 5.9vw 8vw;
+        color: #6d9b5a;
+        font-size: 2vw;
+        font-weight: 100;
+        letter-spacing: 0.3vw;
+        text-align: center;
+    }
+
+    .modalInfo {
+        height: 97%;
+        width: 100%;
+        padding: 0 0 13vw;
+    }
+
+    .modal .info {
+        background-color: #0b3a3a;
+        width: 100%;
+        height: 57vw;
+        flex-direction: column;
+        padding: 4vw 8vw 5vw;
+        border-radius: 0 0 4.2vw 4.2vw;
+    }
+
+    .modal .info p {
+        font-size: 1.9vw;
+    }
+
+    section.modalWindow section.modalWrapper {
+        align-items: center !important;
+        overflow: scroll;
+        height: 93%;
+    }
+
+    .modal .infoC .info {
+        height: 48vw;
+    }
+
+    .closeBtn {
+        position: absolute;
+        right: 03;
+        top: 0;
+        cursor: pointer;
+        color: #93c469;
+        font-size: 1.3vw;
+    }
+
+    .closeBtn img {
+        width: 3vw;
+    }
+
+    .modal .h1 {
+        padding: 0 6vw 5.9vw 8vw;
+        color: #6d9b5a;
+        font-size: 3.2vw;
+        font-weight: 100;
+        letter-spacing: 0.3vw;
+        text-align: center;
+    }
+
+    .modal .infoR .info {
+        height: 35vw;
+    }
+
+    .main .posterC {
+        background-image: url(../img/poster1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        left: 27%;
+        top: 29%;
+        margin-top: 0;
+        position: absolute;
+        width: 41vw;
+        height: 59vw;
+    }
+
+    .main .posterR {
+        background-image: url(../img/poster2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .main .posterL {
+        background-image: url(../img/poster3.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 13vw 0 0;
+    }
+    .container {
+    background-image: url(../img/newspaper-sceneBg_m.png);
+}
+
+}
