@@ -166,7 +166,7 @@
     justify-content: flex-start;
 }
 
- .info .main_h1 {
+.info .main_h1 {
     color: white;
     font-size: 1.78vw;
     font-family: 'SackersM';
@@ -188,7 +188,7 @@
     height: fit-content;
 }
 
- .about_Maria {
+.about_Maria {
     width: 73%;
     height: 90px;
     background-image: url(../img/MSC.png);
@@ -196,14 +196,32 @@
     background-size: contain;
 }
 
- .about_Pierre {
-    width: 73%;
-  height: 3.5vw;
-    margin: 0 0 1vw;
+.about_box_m .about_Maria {
+    width: 79%;
+    height: 7vw;
+    background-image: url(../img/MSC.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.about_tittle {
+    color: white;
+    font-size: 1.2vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5vw;
+    font-family: 'Roboto', sans-serif;
+    line-height: 2;
+    margin: 1.5vw 0;
+}
+
+.about_Pierre {
+    width: 76%;
+    height: 4.5vw;
+    margin: 0;
     background-image: url(../img/PC.png);
     background-repeat: no-repeat;
     background-size: contain;
-    display: none;
 }
 
 .about_p {
@@ -231,33 +249,18 @@
     width: 4.5vw;
 }
 
-.slide-toggled-element,
-.slide-toggled-element2 {
-    display: none;
-    margin: 1.5vw 0 0;
-}
 
- .about_tittle {
+.about_p2 {
     color: white;
-    font-size: 0.85vw;
-    font-weight: 800;
+    font-size: 1vw;
+    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.3vw;
     font-family: 'Roboto', sans-serif;
     line-height: 2;
 }
 
- .about_p2 {
-    color: white;
-    font-size: 0.75vw;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.3vw;
-    font-family: 'Roboto', sans-serif;
-    line-height: 2;
-    margin: 2vw 0 0;
-}
- .header_btn {
+.header_btn {
     color: #93c469;
     border: 1px solid #93c469;
     font-size: 0.73vw;
@@ -268,7 +271,7 @@
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.2vw;
-    margin-top: 2vw;
+    margin-top: 1.5vw;
 }
 
 .shadow {
@@ -412,8 +415,9 @@ section > span {
 
 @media all and (max-width:1024px) {
     .container {
-    background-size: cover;
-}
+        background-size: cover;
+    }
+
     .main .main_box {
         flex-direction: column-reverse;
         margin-top: 2.5vw;

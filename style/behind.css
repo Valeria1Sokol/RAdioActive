@@ -3,9 +3,63 @@
     src: url("../SackersGothicStd-Medium.otf") format("opentype");
 }
 
+.span span {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    margin: 2vw 0;
+    font-size: 25px;
+}
+
+.span {
+    position: relative;
+    z-index: 5;
+}
+
+
+.intro {
+    max-height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.intro1 {
+    opacity: 1;
+}
+
+.intro2 {
+    opacity: 0;
+}
+
+.intro3 {
+    opacity: 0;
+}
+
+.intro4 {
+    opacity: 0;
+}
+
+.intro5 {
+    opacity: 0;
+}
+
+
+
+
+.video {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 56.25%;
+}
+
 .video__media {
     width: 100%;
-    height: 100%;
+    height: auto;
 
     position: absolute;
     top: 0;
@@ -16,7 +70,7 @@ header,
 footer {
 
     position: fixed;
-    z-index: 6;
+    z-index: 8;
 }
 
 #menu,
@@ -29,15 +83,18 @@ footer {
 }
 
 .main {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 100%;
     padding: 9vw 0 0vw 9.6vw;
-    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
     background-size: cover;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    z-index: 3;
 }
 
 .main .main_h1 {
@@ -62,7 +119,7 @@ footer {
     padding-left: 8vw;
 }
 
-.video {
+.main_box .video {
     width: 60%;
     height: 28vw;
     background-color: #081f20;
@@ -72,6 +129,7 @@ footer {
     align-items: center;
     position: relative;
     z-index: 0;
+    padding: 0;
 }
 
 .video .play {
@@ -131,8 +189,8 @@ section {
 }
 
 .dot {
-    width: 1.36vw;
-    height: 1.36vw;
+/*    width: 1.36vw;*/
+    height: 1.4vw;
     /*    border-radius: 100%;*/
     position: relative;
     background-color: transparent;
@@ -142,6 +200,7 @@ section {
     background-image: url(../img/touchImg.png);
     background-repeat: no-repeat;
     background-size: contain;
+    transition: all .5s;
 }
 
 .dot:first-of-type {
@@ -158,7 +217,7 @@ section {
     justify-content: center;
     align-items: center;
     position: absolute;
-    z-index: 2;
+    z-index: 7;
     left: 7%;
     bottom: 11%;
 }
@@ -235,7 +294,7 @@ section {
     width: 65%;
     padding: 3.3vw 3.75vw 1.83vw;
     position: relative;
-    margin: 12vw 5vw;
+       margin: 12vw 0vw 0vw 9vw;
 }
 
 .contant_text span {
@@ -292,7 +351,7 @@ section {
     width: 49%;
     padding: 2.1vw 3.75vw 1.4vw;
     position: relative;
-    margin: 7vw 5vw 1vw;
+    margin: 6vw 0vw 1vw 9vw;
 }
 
 .contant_box_bottom .contant_text {
@@ -315,7 +374,7 @@ section {
     width: 49%;
     padding: 2.1vw 3.75vw 1.4vw;
     position: relative;
-    margin: 0vw 5vw;
+    margin: 0vw 0 0 9vw;
 }
 
 .contant_box_bottom .behind_icon {
@@ -331,16 +390,20 @@ section {
 
 .contant_box4 {
     padding: 3.3vw 1.46vw 1.83vw 3.75vw;
-    margin: 11vw 5vw;
+    margin: 11vw 0 0vw 9vw;
     width: 50%;
 }
 
 .main_Behind {
     display: none;
 }
-.main_Behind
-{
+
+.main_Behind {
     display: none;
+}
+.desctop
+{
+    display: flex;
 }
 
 @media all and (max-width:1024px) {
@@ -392,6 +455,11 @@ section {
     .hideMe {
         display: none;
     }
+    .intro,.desctop
+    {
+        display: none!important;
+    }
+    
 
     .container {
         background-image: url(../img/bg_behind.png);
@@ -581,7 +649,8 @@ section {
     .dots_box {
         margin: 16vw 0;
     }
+
     .header_btn_box_m {
-    height: 11vw;
-}
+        height: 11vw;
+    }
 }
