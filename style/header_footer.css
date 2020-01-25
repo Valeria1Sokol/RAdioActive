@@ -610,6 +610,11 @@ footer .footerIcon_loc {
     .desctop {
         display: none;
     }
+    
+    .header_center
+    {
+        background-size: 98%;
+    }
 
 
 }
@@ -820,4 +825,9 @@ footer .footerIcon_loc {
         transform: rotate(45deg) translate(11px, 14px);
 
     }
+      .header_center
+    {
+        background-size: 95%;
+    }
+
 }
