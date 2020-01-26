@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/matirealize.css">
     <link rel="stylesheet" href="./style/header_footer.css">
     <link rel="stylesheet" href="./style/newspaper.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -61,7 +62,7 @@
                         <li>
                             <div class="btn_menu_list">
                                 <input type="button" class="watch_trailer" value="WATCH TRAILER">
-                               <div class="res_news">
+                                <div class="res_news">
                                     <div class="btnMenu reserve"><a href="#">reserve tickets</a></div>
                                     <div class="btnMenu newsroom"><a href="newspaper.html">NEWSROOM</a></div>
                                 </div>
@@ -87,24 +88,29 @@
             </div>
         </header>
         <section class="main">
-           <p class="news_tittle">TOUCH ON ANY OF THE MAGAZINES TO FIND OUT MORE </p>
-           <div class="mob_poster">
-            <a href="#" class="modalButton btbL" data-popup="popupOne">
-                <div class="poster posterL"></div>
-            </a>
-            <a href="#" class="modalButton btbC" data-popup="popupOne">
-                <div class="poster posterC"></div>
-            </a>
-            <a href="#" class="modalButton btbR" data-popup="popupOne">
-                <div class="poster posterR"></div>
-            </a>
+            <p class="news_tittle">TOUCH ON ANY OF THE MAGAZINES TO FIND OUT MORE </p>
+            <div class="mob_poster">
+                <a href="#" class="modalButton btbL" data-popup="popupOne">
+                    <div class="poster posterL"></div>
+                </a>
+                <a href="#" class="modalButton btbC" data-popup="popupOne">
+                    <div class="poster posterC"></div>
+                </a>
+                <a href="#" class="modalButton btbR" data-popup="popupOne">
+                    <div class="poster posterR"></div>
+                </a>
             </div>
-            <div class="dot">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <div class="carousel">
 
+                <div class="posterL carousel-item modalButton btbL" data-popup="popupOne">
+                </div>
+                <!-- Элементы карусели -->
+
+                <div class="posterC carousel-item modalButton btbC" data-popup="popupOne"></div>
+
+                <div class="posterR carousel-item modalButton btbR" data-popup="popupOne"></div>
+
+            </div>
         </section>
         <section class="modal modalWindow" id="popupOne">
             <section class="modalWrapper">
@@ -255,4 +261,16 @@
         </footer>
     </div>
     <script src="./js/scriptNewsPaper.js"></script>
-</body></html>
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.carousel').carousel({
+                indicators: true
+            });
+        });
+
+    </script>
+</body>
+
+</html>

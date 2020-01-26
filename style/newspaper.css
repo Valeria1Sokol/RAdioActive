@@ -10,6 +10,10 @@
     background-position: center;
 }
 
+.carousel {
+    display: none;
+}
+
 .main {
     display: flex;
     flex-direction: row;
@@ -107,18 +111,18 @@ section.modalWindow section.modalWrapper {
 .modal .info {
     display: none;
     background-color: #0b3a3a;
-    width: 30.5vw;
+    width: 33vw;
     height: 32.2vw;
     flex-direction: column;
-    padding: 4vw 4.5vw 5vw;
+    padding: 3vw 3vw 3vw;
     border-radius: 0 0 2.7vw 2.7vw;
 }
 
 .modalInfo {
     overflow: auto;
     height: 100%;
-        border-radius: 1.7vw;
-        border-radius: 1.7vw;
+    border-radius: 1.7vw;
+    border-radius: 1.7vw;
 }
 
 .modal .info p {
@@ -137,7 +141,7 @@ section.modalWindow section.modalWrapper {
 }
 
 .modal .infoHeader {
-    width: 30.5vw;
+    width: 33vw;
     height: 5vw;
     background-color: #0b3a3a;
     border-radius: 1.7vw;
@@ -189,32 +193,108 @@ section.modalWindow section.modalWrapper {
 .news_tittle {
     display: none;
 }
-.mob_poster
-{
+
+.mob_poster {
     display: flex;
 }
 
+@media all and (max-width:1440px) {
+    .main .poster {
+        width: 15vw;
+        height: 21vw;
+    }
+}
+@media all and (max-width:1024px)
+{
+    .main .poster {
+    width: 19vw;
+    height: 21vw;
+}
+}
+
 @media all and (max-width:768px) {
+    .mob_poster {
+        display: none;
+    }
+
     section.modalWindow section.modalWrapper {
         flex-direction: column;
     }
 
-    .main .poster {
-        width: 36vw;
-        height: 51vw;
+    .carousel {
+        position: absolute;
+        width: 90%;
+        height: 70vh;
+        perspective: 600px;
+        display: flex;
+        flex-direction: row;
+
     }
+
+    .carousel .carousel-item {
+        visibility: hidden;
+        width: 200px;
+        height: 64.5vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .carousel-item {
+        width: 45.8vw !important;
+    }
+
+    .carousel .indicators .indicator-item {
+        width: 1vw;
+        height: 1vw;
+        border-radius: 50%;
+        background-color: #92c66a;
+        opacity: 0.4;
+        margin: 0 1vw 0 0;
+    }
+
+    .carousel .indicators {
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul:not(.browser-default) {
+        padding-left: 0;
+        list-style-type: none;
+    }
+
+    .carousel .indicators .indicator-item.active {
+        opacity: 1;
+        background-color: #92c66a;
+    }
+
 
     .modalImg {
         background-repeat: no-repeat;
-            background-size: contain;
-    width: 44%;
-    height: 40vh;
+        background-size: contain;
+        width: 44%;
+        height: 40vh;
         transition: all 2s;
+    }
+
+    .main .posterR,
+    .main .posterC,
+    .main .posterL {
+        margin: 0
     }
 
     section.modalWindow {
         top: 4%;
         height: 100%;
+        /*        left: 0;*/
     }
 
     .modal ul {
@@ -267,7 +347,7 @@ section.modalWindow section.modalWrapper {
 
     .closeBtn {
         position: absolute;
-        right: 03;
+        right: 8%;
         top: 0;
         cursor: pointer;
         color: #93c469;
@@ -295,12 +375,6 @@ section.modalWindow section.modalWrapper {
         background-image: url(../img/poster1.png);
         background-size: cover;
         background-repeat: no-repeat;
-        left: 27%;
-        top: 29%;
-        margin-top: 0;
-        position: absolute;
-        width: 41vw;
-        height: 59vw;
     }
 
     .main .posterR {
@@ -313,7 +387,6 @@ section.modalWindow section.modalWrapper {
         background-image: url(../img/poster3.png);
         background-size: cover;
         background-repeat: no-repeat;
-        margin: 0 13vw 0 0;
     }
 
     .container {
@@ -331,31 +404,11 @@ section.modalWindow section.modalWrapper {
         text-align: center;
     }
 
-    .mob_poster {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .dot {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .dot span {
-        width: 1vw;
-        height: 1vw;
-        border-radius: 50%;
-        background-color: #92c66a;
-        margin: 0 2vw 0 0;
-    }
 
     .main {
         flex-direction: column;
-            justify-content: space-between;
-        padding: 12vw 0 18vw;
+        justify-content: space-between;
+        padding: 12vw 0 0;
     }
 
 }

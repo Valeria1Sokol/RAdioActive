@@ -39,6 +39,16 @@ header {
     padding: 0 2.1vw;
 }
 
+nav {
+    background-color: transparent;
+    width: fit-content
+}
+
+[type="checkbox"] + span:not(.lever):before,
+[type="checkbox"]:not(.filled-in) + span:not(.lever):after {
+    border: none;
+}
+
 #menuToggle {
     margin-top: 2.3vw;
     display: block;
@@ -618,6 +628,8 @@ footer .footerIcon_loc {
 }
 
 @media all and (max-width:768px) {
+
+
     #menuToggle .menuCheck {
         height: 4.7vw;
     }
