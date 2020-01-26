@@ -363,12 +363,12 @@ footer {
     }
 
     .shadowGreen2 {
-        width: 86vw;
-        position: absolute;
-        left: 24%;
-        background-size: 96%;
-        background-position: left center;
-        background-position: left 50%;
+           width: 42%;
+    position: absolute;
+    left: 24%;
+    background-size: cover;
+    background-position: left center;
+    background-position: left 50%;
     }
 
     .closeBtn {
@@ -389,9 +389,10 @@ footer {
     .main2 {
         padding: 7vh 0 2vh;
     }
+
     .shadowGreen2 {
-    left: 30%;
-}
+        left: 30%;
+    }
 
     .main2 .main_h1 {
         padding: 0 9.7vw;
@@ -416,3 +417,4 @@ footer {
         padding: 23vh 0 0;
     }
 }
+
