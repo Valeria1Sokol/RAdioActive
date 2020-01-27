@@ -129,7 +129,7 @@ section.modalWindow section.modalWrapper {
 .modalImg {
     background-repeat: no-repeat;
     background-size: cover;
-    width: 27vw;
+    width: 29vw;
     height: 40vw;
     transition: all 2s;
 }
@@ -239,7 +239,7 @@ section.modalWindow section.modalWrapper {
 }
 
 .btnNewsPaper {
-    width: 71%;
+    width: 66%;
     background-color: #93c469;
     padding: 0.8vw 2.4vw;
     border-radius: 50px;
@@ -257,7 +257,7 @@ section.modalWindow section.modalWrapper {
 .btnNewsPaper a {
     text-decoration: none;
     color: #081f20;
-    font-size: 1vw;
+    font-size: 0.8vw;
     font-family: 'AvenirM';
     font-weight: 800;
     text-align: left;
@@ -265,8 +265,8 @@ section.modalWindow section.modalWrapper {
 }
 
 .btnNewsPaper .btnIcon {
-    width: 2.3vw;
-    margin: 0 2vw 0 0;
+   width: 1.8vw;
+    margin: 0 1vw 0 0;
 }
 
 .btnRebel,
