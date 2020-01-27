@@ -8,6 +8,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 0;
+}
+
+.container::before {
+    display: none;
 }
 
 .carousel {
@@ -95,8 +100,8 @@ section.modalWindow section.modalWrapper {
     color: #93c469;
     font-size: 1.3vw;
 }
-.closeBtn img
-{
+
+.closeBtn img {
     width: 2vw;
 }
 
@@ -230,7 +235,7 @@ section.modalWindow section.modalWrapper {
     text-decoration: none;
     color: #081f20;
     font-size: 1vw;
-    font-family: 'Avenir';
+    font-family: 'AvenirM';
     font-weight: 800;
     text-align: left;
 
@@ -365,13 +370,25 @@ section.modalWindow section.modalWrapper {
     }
 
     .modalWripperImg {
-        height: 71%;
+        height: 65%;
+    }
+
+    .modalImg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 28vw;
+        height: 38vw;
+        transition: all 2s;
     }
 }
 
 @media all and (max-width:768px) {
     .mob_poster {
         display: none;
+    }
+
+    .modalWripperImg {
+        height: 71%;
     }
 
     section.modalWindow section.modalWrapper {
@@ -446,8 +463,12 @@ section.modalWindow section.modalWrapper {
     .modalImg {
         background-repeat: no-repeat;
         background-size: contain;
-        width: 33%;
+        width: 44%;
         transition: all 2s;
+    }
+
+    .btnImpact {
+        margin: 0 0 2vw;
     }
 
     .modalWripperImg {
@@ -473,11 +494,11 @@ section.modalWindow section.modalWrapper {
 
     .modal .infoHeader {
         width: 100%;
-        height: 16vw;
+        height: 10vw;
         background-color: #0b3a3a;
-        border-radius: 4.2vw;
-        margin: 0 0 -6.5vw;
-        padding: 0 6vw 5.9vw 8vw;
+        border-radius: 4.2vw 4.4vw 0 0;
+        /* margin: 0 0 -6.5vw; */
+        padding: 2vw 6vw 0 8vw;
         color: #6d9b5a;
         font-size: 2vw;
         font-weight: 100;
@@ -492,6 +513,10 @@ section.modalWindow section.modalWrapper {
         border-radius: 4.2vw;
     }
 
+    .modal .arrow {
+        width: 2.4vw;
+    }
+
     .modal .info {
         background-color: #0b3a3a;
         width: 100%;
@@ -503,6 +528,7 @@ section.modalWindow section.modalWrapper {
 
     .modal .info p {
         font-size: 1.9vw;
+        margin: 2vw 0 0;
     }
 
     section.modalWindow section.modalWrapper {
@@ -579,6 +605,23 @@ section.modalWindow section.modalWrapper {
         flex-direction: column;
         justify-content: space-between;
         padding: 12vw 0 0;
+    }
+
+    #accordion .panel-heading a:not(.collapsed) {
+        width: 100%;
+        color: #6d9b5a;
+        font-size: 3vw;
+        font-weight: 100;
+        letter-spacing: 0.3vw;
+        text-align: center;
+    }
+
+    #accordion .panel-heading a {
+        color: #6d9b5a;
+        font-size: 2.3vw;
+        font-weight: 100;
+        letter-spacing: 0.3vw;
+        text-align: center;
     }
 
 }
