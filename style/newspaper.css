@@ -177,6 +177,7 @@ section.modalWindow section.modalWrapper {
     text-transform: uppercase;
     letter-spacing: 0.3vw;
     text-align: left;
+    padding: 0vw 3vw 3vw;
 }
 
 .modal .infoC .info {
@@ -253,8 +254,7 @@ section.modalWindow section.modalWrapper {
 
 #accordion .panel-heading a.collapsed:hover,
 #accordion .panel-heading a.collapsed:focus {
-    background-color: #b42b2b;
-    color: white;
+  
     transition: all 0.2s ease-in;
 }
 
@@ -275,7 +275,7 @@ section.modalWindow section.modalWrapper {
     transition: all 0.4s;
     line-height: 1.5;
     font-family: 'Storyteller';
-
+    text-decoration: none;
 }
 
 #accordion .panel-heading a {
@@ -287,7 +287,7 @@ section.modalWindow section.modalWrapper {
     text-transform: uppercase;
     letter-spacing: 0.3vw;
     text-align: left;
-
+     text-decoration: none;
 }
 
 .panel-group .panel-heading + .panel-collapse > .list-group,
@@ -328,6 +328,14 @@ section.modalWindow section.modalWrapper {
     border-radius: 0px;
     -webkit-box-shadow: 0 0 0px rgba(0, 0, 0, .05);
     box-shadow: 0 0 0px rgba(0, 0, 0, .05);
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+    /*    padding: 0 0 3vw;*/
 }
 
 
