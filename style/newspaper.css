@@ -54,12 +54,12 @@ section.modal {
 
 section.modalWindow {
     display: none;
-    position: fixed;
+   position: fixed;
     left: 13%;
-    top: 15%;
+    top: 4%;
     z-index: 999 !important;
     width: 75%;
-    height: 75%;
+    height: 99%;
     background: transparent;
     cursor: default;
 }
@@ -141,8 +141,8 @@ section.modalWindow section.modalWrapper {
 }
 
 .modal .infoHeader {
-    width: 33vw;
-    height: 5vw;
+   width: 33vw;
+    height: 6vw;
     background-color: #0b3a3a;
     border-radius: 1.7vw;
     margin: 0 0 -2.5vw;
@@ -150,10 +150,9 @@ section.modalWindow section.modalWrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 3vw 0vw;
+    align-items: flex-start;
+    padding: 1vw 3vw 0vw;
     transition: all 0.4s;
-
 }
 
 
@@ -177,7 +176,6 @@ section.modalWindow section.modalWrapper {
     text-transform: uppercase;
     letter-spacing: 0.3vw;
     text-align: left;
-    padding: 0vw 3vw 3vw;
 }
 
 .modal .infoC .info {
@@ -296,20 +294,14 @@ section.modalWindow section.modalWrapper {
 }
 
 /* Add Indicator fontawesome icon to the left */
-#accordion .panel-heading .accordion-toggle::before {
-    font-family: 'FontAwesome';
-    content: '\f00d';
-    float: left;
-    color: white;
-    font-weight: lighter;
-    transform: rotate(0deg);
-    transition: all 0.2s ease-in;
+#accordion .panel-heading .accordion-toggle .arrow {
+   display: flex;
 }
 
-#accordion .panel-heading .accordion-toggle.collapsed::before {
-    color: #444;
-    transform: rotate(-135deg);
-    transition: all 0.2s ease-in;
+#accordion .panel-heading .accordion-toggle.collapsed .arrow{
+ display: none;
+    
+/*    here*/
 }
 
 .panel-group .panel + .panel {
