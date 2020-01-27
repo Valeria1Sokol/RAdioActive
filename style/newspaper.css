@@ -253,12 +253,28 @@ section.modalWindow section.modalWrapper {
         width: 15vw;
         height: 21vw;
     }
+
+    .modalImg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 20vw;
+        height: 28vw;
+        transition: all 2s;
+    }
+
+    .modalWripperImg {
+        height: 100%;
+    }
 }
 
 @media all and (max-width:1024px) {
     .main .poster {
         width: 19vw;
         height: 21vw;
+    }
+
+    .modalWripperImg {
+        height: 71%;
     }
 }
 
@@ -270,10 +286,11 @@ section.modalWindow section.modalWrapper {
     section.modalWindow section.modalWrapper {
         flex-direction: column;
     }
+
     .btnNewsPaper .btnIcon {
-    width: 4.3vw;
-    margin: 0 2vw 0 0;
-}
+        width: 4.3vw;
+        margin: 0 2vw 0 0;
+    }
 
     .btnNewsPaper a {
         font-size: 2vw;
@@ -338,12 +355,13 @@ section.modalWindow section.modalWrapper {
     .modalImg {
         background-repeat: no-repeat;
         background-size: contain;
-        width: 46%;
+        width: 33%;
         transition: all 2s;
     }
 
     .modalWripperImg {
-        height: 61%;
+        height: 41%;
+        margin: 0 0 2vw;
     }
 
     .main .posterR,
@@ -353,7 +371,7 @@ section.modalWindow section.modalWrapper {
     }
 
     section.modalWindow {
-        top: 4%;
+        top: 1%;
         height: 100%;
         /*        left: 0;*/
     }
@@ -399,7 +417,7 @@ section.modalWindow section.modalWrapper {
     section.modalWindow section.modalWrapper {
         align-items: center !important;
         overflow: scroll;
-        height: 93%;
+        height: 100%;
     }
 
     .modal .infoC .info {
