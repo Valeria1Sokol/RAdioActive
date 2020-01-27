@@ -125,28 +125,28 @@ $(settings.objModalCloseBtn).bind("click", function () {
 });
 var k = 0;
 var spoilers = $(".ingredient");
-spoilers.each(function () {
-    var spoiler = $(this);
-    spoiler.find(".infoHeader").click(function () {
-
-        //        spoiler.find(".info").slideToggle("slow");
-        if ($(this).hasClass('headerIngredient')) {
-            spoiler.find("img").css({
-                display: 'none'
-            })
-            $(this).removeClass("headerIngredient").addClass("h1");
-            spoiler.find(".ingredientInfo").slideToggle("slow");
-
-
-        } else {
-            $(this).removeClass("h1").addClass("headerIngredient");
-            spoiler.find(".ingredientInfo").slideToggle("slow");
-            spoiler.find("img").css({
-                display: 'block'
-            })
-        }
-
-
-
-    });
-});
+//spoilers.each(function () {
+//    var spoiler = $(this);
+//    spoiler.find(".infoHeader").click(function () {
+//
+//        //        spoiler.find(".info").slideToggle("slow");
+//        if ($(this).hasClass('headerIngredient')) {
+//            spoiler.find("img").css({
+//                display: 'none'
+//            })
+//            $(this).removeClass("headerIngredient").addClass("h1");
+//            spoiler.find(".ingredientInfo").slideToggle("slow");
+//
+//
+//        } else {
+//            $(this).removeClass("h1").addClass("headerIngredient");
+//            spoiler.find(".ingredientInfo").slideToggle("slow");
+//            spoiler.find("img").css({
+//                display: 'block'
+//            })
+//        }
+//
+//
+//
+//    });
+//});

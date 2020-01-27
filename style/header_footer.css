@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'AvenirM';
+    src: url("../font/Avenir-LT-65-Medium.ttf");
+}
+@font-face {
+    font-family: 'AvenirL';
+    src: url("../font/AvenirLTStd-Light_2.otf") format("opentype");
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -329,7 +338,7 @@ nav {
     font-size: 0.8vw;
     color: #0e4a4f;
     letter-spacing: 5px;
-    font-family: 'Avenir';
+    font-family: 'AvenirM';
     font-weight: 600;
 }
 

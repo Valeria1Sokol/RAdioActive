@@ -109,7 +109,7 @@ section.modalWindow section.modalWrapper {
 }
 
 .modal .info {
-    display: none;
+    /*    display: none;*/
     background-color: #0b3a3a;
     width: 33vw;
     height: 32.2vw;
@@ -151,7 +151,7 @@ section.modalWindow section.modalWrapper {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3vw 2.9vw;
+    padding: 0 3vw 0vw;
     transition: all 0.4s;
 
 }
@@ -265,7 +265,34 @@ section.modalWindow section.modalWrapper {
 
 #accordion .panel-heading a:not(.collapsed) {
 
+    font-size: 1.3vw;
+    color: #93c469;
+    font-weight: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+    text-align: left;
+    padding: 0 3vw 0vw;
+    transition: all 0.4s;
+    line-height: 1.5;
+    font-family: 'Storyteller';
+
+}
+
+#accordion .panel-heading a {
+
     transition: all 0.2s ease-in;
+    color: #6d9b5a;
+    font-size: 0.6vw;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+    text-align: left;
+
+}
+
+.panel-group .panel-heading + .panel-collapse > .list-group,
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+    border-top: none;
 }
 
 /* Add Indicator fontawesome icon to the left */
@@ -283,6 +310,24 @@ section.modalWindow section.modalWrapper {
     color: #444;
     transform: rotate(-135deg);
     transition: all 0.2s ease-in;
+}
+
+.panel-group .panel + .panel {
+    margin-top: 0px;
+}
+
+.panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 0px;
+}
+
+.panel {
+    margin-bottom: 0px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 0 0px rgba(0, 0, 0, .05);
+    box-shadow: 0 0 0px rgba(0, 0, 0, .05);
 }
 
 
