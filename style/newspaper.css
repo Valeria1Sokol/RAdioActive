@@ -54,11 +54,11 @@ section.modal {
 
 section.modalWindow {
     display: none;
-   position: fixed;
+    position: fixed;
     left: 13%;
     top: 4%;
     z-index: 999 !important;
-    width: 75%;
+    width: 80%;
     height: 99%;
     background: transparent;
     cursor: default;
@@ -80,6 +80,7 @@ section.modalWindow section.modalWrapper {
     padding: 1vw;
     text-align: left;
     height: 100%;
+    width: 93%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -88,11 +89,15 @@ section.modalWindow section.modalWrapper {
 
 .closeBtn {
     position: absolute;
-    right: -12%;
-    top: -14%;
+    right: 0%;
+    top: 0%;
     cursor: pointer;
     color: #93c469;
     font-size: 1.3vw;
+}
+.closeBtn img
+{
+    width: 2vw;
 }
 
 .modalImg {
@@ -141,7 +146,7 @@ section.modalWindow section.modalWrapper {
 }
 
 .modal .infoHeader {
-   width: 33vw;
+    width: 33vw;
     height: 6vw;
     background-color: #0b3a3a;
     border-radius: 1.7vw;
@@ -252,7 +257,7 @@ section.modalWindow section.modalWrapper {
 
 #accordion .panel-heading a.collapsed:hover,
 #accordion .panel-heading a.collapsed:focus {
-  
+
     transition: all 0.2s ease-in;
 }
 
@@ -269,7 +274,6 @@ section.modalWindow section.modalWrapper {
     text-transform: uppercase;
     letter-spacing: 0.3vw;
     text-align: left;
-    padding: 0 3vw 0vw;
     transition: all 0.4s;
     line-height: 1.5;
     font-family: 'Storyteller';
@@ -285,7 +289,10 @@ section.modalWindow section.modalWrapper {
     text-transform: uppercase;
     letter-spacing: 0.3vw;
     text-align: left;
-     text-decoration: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .panel-group .panel-heading + .panel-collapse > .list-group,
@@ -295,13 +302,13 @@ section.modalWindow section.modalWrapper {
 
 /* Add Indicator fontawesome icon to the left */
 #accordion .panel-heading .accordion-toggle .arrow {
-   display: flex;
+    display: none;
 }
 
-#accordion .panel-heading .accordion-toggle.collapsed .arrow{
- display: none;
-    
-/*    here*/
+#accordion .panel-heading .accordion-toggle.collapsed .arrow {
+    display: flex;
+
+    /*    here*/
 }
 
 .panel-group .panel + .panel {
@@ -327,6 +334,7 @@ section.modalWindow section.modalWrapper {
     margin-bottom: 0;
     font-size: 16px;
     color: inherit;
+    width: 100%;
     /*    padding: 0 0 3vw;*/
 }
 
