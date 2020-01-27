@@ -3,7 +3,7 @@ var widthW = window.innerWidth;
 var widthH = window.innerHeight;
 console.log(widthH);
 console.log(widthW);
-if (widthW >= '1025') {
+if (widthW >= '1024') {
     open.each(function () {
         var openB = $(this);
         var k = 1;
@@ -107,7 +107,7 @@ if (widthW >= '1025') {
 } else
 
 
-if (widthW <= '1024') {
+if (widthW <= '1023') {
     open.each(function () {
         var openB = $(this);
         var k = 1;

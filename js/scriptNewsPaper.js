@@ -17,7 +17,8 @@ settings = {
 //});
 $('.btbL').bind("click", function () {
     $('.modalImg').css({
-        backgroundImage: 'url(./img/poster3.png)'
+        backgroundImage: 'url(./img/poster3.png)',
+//        width: '60%'
     });
 
     $('.infoL').css({
@@ -51,7 +52,8 @@ $('.btbL').bind("click", function () {
 $('.btbC').bind("click", function () {
     if ($(this).attr(settings.objModalDataAttr)) {
         $('.modalImg').css({
-            backgroundImage: 'url(./img/poster1.png)'
+            backgroundImage: 'url(./img/poster1.png)',
+//            width: '66%'
         });
         $('.infoL').css({
             display: 'none'
@@ -87,7 +89,8 @@ $('.btbC').bind("click", function () {
 $('.btbR').bind("click", function () {
     if ($(this).attr(settings.objModalDataAttr)) {
         $('.modalImg').css({
-            backgroundImage: 'url(./img/poster2.png)'
+            backgroundImage: 'url(./img/poster2.png)',
+//            width: '74%'
         });
         $('.infoL').css({
             display: 'none'

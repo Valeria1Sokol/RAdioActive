@@ -2,6 +2,27 @@
     font-family: 'Storyteller';
     src: url("../font/Storyteller.otf") format("opentype");
 }
+/* width */
+.modal .info p::-webkit-scrollbar {
+  width: 5px;
+   
+}
+
+/* Track */
+.modal .info p::-webkit-scrollbar-track {
+   
+   box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  background: rgb(147, 196, 105,0.4);
+}
+ 
+/* Handle */
+.modal .info p::-webkit-scrollbar-thumb {
+  background: rgb(147, 196, 105,0.8); 
+  border-radius: 10px;
+    width: 5px;
+}
+
 
 .container {
     background-image: url(../img/newspaper-sceneBg.png);
@@ -108,8 +129,8 @@ section.modalWindow section.modalWrapper {
 .modalImg {
     background-repeat: no-repeat;
     background-size: cover;
-    width: 28vw;
-    height: 38vw;
+    width: 27vw;
+    height: 40vw;
     transition: all 2s;
 }
 
@@ -144,6 +165,7 @@ section.modalWindow section.modalWrapper {
     line-height: 1.6;
     overflow: auto;
     height: 100%;
+    padding: 0 1vw 0 0;
 }
 
 .modal .active {
@@ -211,7 +233,7 @@ section.modalWindow section.modalWrapper {
 .modalWripperImg {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     height: 83%;
 }
@@ -229,6 +251,7 @@ section.modalWindow section.modalWrapper {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 0 0 1.5vw;
 }
 
 .btnNewsPaper a {
@@ -271,7 +294,7 @@ section.modalWindow section.modalWrapper {
     color: white;
 }
 
-#accordion .panel-heading a:not(.collapsed) {
+#accordion .panel-heading:not(.collapsed) .panel-title {
 
     font-size: 1.3vw;
     color: #93c469;
@@ -300,6 +323,39 @@ section.modalWindow section.modalWrapper {
     justify-content: space-between;
 }
 
+.i-accordion .panel-heading,
+.d-accordion .panel-heading,
+.accordion-2a .panel-heading,
+.accordion-2b .panel-heading,
+.accordion-3 .panel-heading {
+    cursor: pointer;
+}
+
+.d-accordion .panel-heading.collapsed .fa-chevron-up:before {
+    content: '\f078';
+    color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.4vw;
+}
+
+.panel-heading:not(.collapsed) .pull-right {
+    background-image: none;
+}
+
+.panel-heading:not(.collapsed) .panel-title {
+    font-size: 1.3vw;
+    color: #93c469;
+    font-weight: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+    text-align: left;
+    transition: all .6s;
+    line-height: 1.5;
+    font-family: 'Storyteller';
+    text-decoration: none;
+}
+
 .panel-group .panel-heading + .panel-collapse > .list-group,
 .panel-group .panel-heading + .panel-collapse > .panel-body {
     border-top: none;
@@ -307,6 +363,26 @@ section.modalWindow section.modalWrapper {
 
 /* Add Indicator fontawesome icon to the left */
 #accordion .panel-heading .accordion-toggle .arrow {
+    display: none;
+}
+
+.pull-right {
+    float: right !important;
+    color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.4vw;
+    background-image: url(../img/arrow_down.png);
+
+}
+
+.fa-chevron-down:before {
+    display: flex;
+    content: '\f078';
+
+}
+
+fa-chevron-up {
     display: none;
 }
 
@@ -335,12 +411,18 @@ section.modalWindow section.modalWrapper {
 }
 
 .panel-title {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 16px;
-    color: inherit;
+    transition: all 0.2s ease-in;
+    color: #6d9b5a;
+    font-size: 0.6vw;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.3vw;
+    text-align: left;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    /*    padding: 0 0 3vw;*/
 }
 
 
@@ -353,8 +435,8 @@ section.modalWindow section.modalWrapper {
     .modalImg {
         background-repeat: no-repeat;
         background-size: cover;
-        width: 20vw;
-        height: 28vw;
+        width: 24vw;
+    height: 34vw;
         transition: all 2s;
     }
 
@@ -390,6 +472,10 @@ section.modalWindow section.modalWrapper {
     .modalWripperImg {
         height: 71%;
     }
+    .modal .info p::-webkit-scrollbar {
+  width: 2px;
+   
+}
 
     section.modalWindow section.modalWrapper {
         flex-direction: column;
@@ -484,8 +570,7 @@ section.modalWindow section.modalWrapper {
 
     section.modalWindow {
         top: 1%;
-        height: 100%;
-        /*        left: 0;*/
+        height: 99%;
     }
 
     .modal ul {
@@ -497,7 +582,6 @@ section.modalWindow section.modalWrapper {
         height: 10vw;
         background-color: #0b3a3a;
         border-radius: 4.2vw 4.4vw 0 0;
-        /* margin: 0 0 -6.5vw; */
         padding: 2vw 6vw 0 8vw;
         color: #6d9b5a;
         font-size: 2vw;
@@ -520,7 +604,7 @@ section.modalWindow section.modalWrapper {
     .modal .info {
         background-color: #0b3a3a;
         width: 100%;
-        height: 57vw;
+        height: 55vw;
         flex-direction: column;
         padding: 4vw 8vw 5vw;
         border-radius: 0 0 4.2vw 4.2vw;
@@ -528,7 +612,8 @@ section.modalWindow section.modalWrapper {
 
     .modal .info p {
         font-size: 1.9vw;
-        margin: 2vw 0 0;
+/*        margin: 2vw 0 0;*/
+        letter-spacing: 0.3vw;
     }
 
     section.modalWindow section.modalWrapper {
@@ -607,21 +692,42 @@ section.modalWindow section.modalWrapper {
         padding: 12vw 0 0;
     }
 
-    #accordion .panel-heading a:not(.collapsed) {
+    .panel-heading:not(.collapsed) .panel-title {
         width: 100%;
         color: #6d9b5a;
         font-size: 3vw;
         font-weight: 100;
         letter-spacing: 0.3vw;
-        text-align: center;
+        text-align: left;
     }
 
-    #accordion .panel-heading a {
+    .panel-title {
         color: #6d9b5a;
         font-size: 2.3vw;
-        font-weight: 100;
+        font-weight: 300;
         letter-spacing: 0.3vw;
-        text-align: center;
+        text-align: left;
+        border-radius: 4.7vw;
     }
 
+    .panel-group {
+        margin-bottom: 0;
+        border-radius: 4.2vw;
+    }
+
+    .fa.pull-right {
+        margin-left: 0;
+    }
+
+    .pull-right {
+        width: 3vw;
+    }
+
+}
+
+@media all and (max-width:425px) {
+    .modalImg {
+        width: 60%;
+        height: 52vw;
+    }
 }
