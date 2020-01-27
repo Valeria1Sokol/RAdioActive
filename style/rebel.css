@@ -120,40 +120,36 @@
 }
 
 .marie_pierre_box .marie {
-    position: relative;
+    position: absolute;
     z-index: 3;
-    width: 32.3vw;
-    height: 100%;
-    left: 0.4vw;
-    top: -0.7vw;
+    width: 30.4vw;
+    height: 90%;
     background-image: url(../img/marie.png);
     background-repeat: no-repeat;
-    background-size: 99%;
-    background-position: bottom;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 9vw 0 0 7vw;
+    padding: 5vw 0 0 9vw;
     transition: all 1s;
 }
 
 
 .marie_pierre_box .pierre {
-    position: relative;
+    position: absolute;
     z-index: 3;
-    width: 22.5vw;
-    height: 100%;
-    left: -4.4vw;
+    width: 23vw;
+    height: 106%;
+    left: 54%;
     background-image: url(../img/pierre.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 6vw 0 0;
+    padding: 6vw 5vw 0 0;
     transition: all 1s;
 }
 
@@ -182,7 +178,6 @@
     align-items: flex-start;
     background-color: #00393a;
     padding: 3.1vw 2.4vw 3.1vw 11.5vw;
-    border-radius: 6.5vw 0 0 6.5vw;
     position: relative;
     z-index: 1;
     height: fit-content;
@@ -337,86 +332,18 @@ section > span {
 
 @media all and (max-width:1440px) {
 
-
-    .container {
-        background-size: 100% 100%;
-    }
-
     .shadowGreen2 {
         width: 100vw;
         height: 105vh;
         background-position: 51% 90%;
     }
 
-    .marie_pierre_box .marie {
-        width: 32.3vw;
-        height: 100%;
-        left: 1.4vw;
-        top: -1.5vw;
-        background-size: 98.5% 103%;
-    }
-
-    .marie_pierre_box {
-        left: 6.6vw;
-    }
-
-    .marie_pierre_box .pierre {
-        width: 22.5vw;
-        height: 100%;
-        left: -3.3vw;
-        background-size: 102% 101%;
-        padding: 6vw 0 0;
-    }
 
 }
 
-@media all and (max-width:1366px) {
-    .container {
-        background-size: 116% 100%;
-    }
-
-    .marie_pierre_box .pierre {
-        width: 30.5vw;
-        height: 97%;
-        left: -1.8vw;
-        background-size: 102% 101%;
-        padding: 6vw 0 0;
-    }
-
-    .marie_pierre_box {
-        width: 59%;
-        height: 100%;
-        left: 1.6vw;
-    }
-
-    .marie_pierre_box .marie {
-        width: 39.3vw;
-        height: 99%;
-        left: 1.7vw;
-        top: -2.1vw;
-        background-size: 111.5% 101%;
-    }
-
-    .main2 .about_box .about_Maria {
-        width: 19.2vw;
-        height: 6.3vw;
-    }
-}
-
-@media all and (max-width:1366px) and (max-height:720px) {
-    .marie_pierre_box .marie {
-        background-size: 111.5% 102%;
-    }
-
-    .marie_pierre_box .pierre {
-        background-size: 102% 103%;
-    }
-}
+@media all and (max-width:1366px) {}
 
 @media all and (max-width:1024px) {
-    .container {
-        background-size: cover;
-    }
 
     .main .main_box {
         flex-direction: column-reverse;

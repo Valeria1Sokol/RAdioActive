@@ -19,6 +19,7 @@ $('.btbL').bind("click", function () {
     $('.modalImg').css({
         backgroundImage: 'url(./img/poster3.png)'
     });
+
     $('.infoL').css({
         display: 'flex'
     })
@@ -28,8 +29,14 @@ $('.btbL').bind("click", function () {
     $('.infoR').css({
         display: 'none'
     })
-    $('.modalWrapper').css({
-        'align-items': 'center'
+    $('.btnSience').css({
+        display: 'none'
+    })
+    $('.btnImpact').css({
+        display: 'flex'
+    })
+    $('.btnRebel').css({
+        display: 'none'
     })
     if ($(this).attr(settings.objModalDataAttr)) {
 
@@ -54,6 +61,15 @@ $('.btbC').bind("click", function () {
         })
         $('.infoR').css({
             display: 'none'
+        });
+        $('.btnSience').css({
+            display: 'none'
+        })
+        $('.btnImpact').css({
+            display: 'none'
+        })
+        $('.btnRebel').css({
+            display: 'flex'
         })
         $('.modalWrapper').css({
             'align-items': 'flex-start'
@@ -85,6 +101,15 @@ $('.btbR').bind("click", function () {
         $('.modalWrapper').css({
             'align-items': 'flex-start'
         })
+        $('.btnSience').css({
+            display: 'flex'
+        })
+        $('.btnImpact').css({
+            display: 'none'
+        })
+        $('.btnRebel').css({
+            display: 'none'
+        })
         var strDataPopupName = $(this).attr(settings.objModalDataAttr);
 
 
@@ -106,16 +131,17 @@ spoilers.each(function () {
 
         //        spoiler.find(".info").slideToggle("slow");
         if ($(this).hasClass('headerIngredient')) {
-            $(this).removeClass("headerIngredient").addClass("h1");
-            spoiler.find(".ingredientInfo").slideToggle("slow");
-            spoiler.find('.arrow').css({
+            spoiler.find("img").css({
                 display: 'none'
             })
+            $(this).removeClass("headerIngredient").addClass("h1");
+            spoiler.find(".ingredientInfo").slideToggle("slow");
+
 
         } else {
             $(this).removeClass("h1").addClass("headerIngredient");
             spoiler.find(".ingredientInfo").slideToggle("slow");
-            spoiler.find('.arrow').css({
+            spoiler.find("img").css({
                 display: 'block'
             })
         }

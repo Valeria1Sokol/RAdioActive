@@ -3,7 +3,7 @@ var widthW = window.innerWidth;
 var widthH = window.innerHeight;
 console.log(widthH);
 console.log(widthW);
-if (widthW >= '1024') {
+if (widthW >= '1025') {
     open.each(function () {
         var openB = $(this);
         var k = 1;
@@ -76,6 +76,8 @@ if (widthW >= '1024') {
 
                 k = 0;
             } else if (k == 0) {
+
+
                 $('.about_box_p').animate({
                     opacity: 0
                 }, 800)
@@ -96,6 +98,7 @@ if (widthW >= '1024') {
                     zIndex: '3'
                 });
 
+
                 k = 1;
             }
         });
@@ -104,7 +107,7 @@ if (widthW >= '1024') {
 } else
 
 
-if (widthW <= '1023') {
+if (widthW <= '1024') {
     open.each(function () {
         var openB = $(this);
         var k = 1;
@@ -112,11 +115,11 @@ if (widthW <= '1023') {
 
             if (k == 1) {
                 $('footer').animate({
-                   opacity:'0'
-                },500);
-                  $('#menuToggle').animate({
                     opacity: '0'
-                },500);
+                }, 500);
+                $('#menuToggle').animate({
+                    opacity: '0'
+                }, 500);
                 $('.about_box_m').animate({
                     opacity: 1,
                 }, 500);
@@ -157,23 +160,23 @@ if (widthW <= '1023') {
                 $('.pierre').animate({
                     zIndex: '2'
                 });
-                 $('footer').animate({
+                $('footer').animate({
                     opacity: '1'
-                },500);
-                 $('#menuToggle').animate({
+                }, 500);
+                $('#menuToggle').animate({
                     opacity: '1'
-                },500);
+                }, 500);
                 k = 1;
             }
         });
         openB.find(".pierre .touchP").click(function () {
             if (k == 1) {
                 $('footer').animate({
-                   opacity:'0'
-                },500);
-                  $('#menuToggle').animate({
                     opacity: '0'
-                },500);
+                }, 500);
+                $('#menuToggle').animate({
+                    opacity: '0'
+                }, 500);
                 $('.about_box_p').animate({
                     opacity: 1
                 }, 500)
@@ -214,12 +217,12 @@ if (widthW <= '1023') {
                 $('.marie').css({
                     zIndex: '2'
                 });
-                 $('footer').animate({
+                $('footer').animate({
                     opacity: '1'
-                },500);
-                 $('#menuToggle').animate({
+                }, 500);
+                $('#menuToggle').animate({
                     opacity: '1'
-                },500);
+                }, 500);
 
                 k = 1;
             }

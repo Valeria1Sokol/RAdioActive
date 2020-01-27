@@ -83,7 +83,7 @@ section.modalWindow section.modalWrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .closeBtn {
@@ -130,7 +130,7 @@ section.modalWindow section.modalWrapper {
     color: white;
     font-weight: 100;
     text-transform: uppercase;
-    letter-spacing: 0.4vw;
+    letter-spacing: 0.2vw;
     line-height: 1.6;
     overflow: auto;
     height: 100%;
@@ -151,22 +151,23 @@ section.modalWindow section.modalWrapper {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2vw 2.9vw;
-    transition: all 0.8s;
-    font-family: 'Storyteller';
+    padding: 0 3vw 2.9vw;
+    transition: all 0.4s;
+
 }
 
 
 .modal .h1 {
     font-size: 1.3vw;
     color: #93c469;
-    font-weight: 800;
+    font-weight: inherit;
     text-transform: uppercase;
     letter-spacing: 0.3vw;
     text-align: left;
-    padding: 0 2vw 0vw;
-    transition: all 0.8s;
+    padding: 0 3vw 0vw;
+    transition: all 0.4s;
     line-height: 1.5;
+    font-family: 'Storyteller';
 }
 
 .modal .headerIngredient {
@@ -198,18 +199,67 @@ section.modalWindow section.modalWrapper {
     display: flex;
 }
 
+.modalWripperImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 83%;
+}
+
+.btnNewsPaper {
+    width: 71%;
+    background-color: #93c469;
+    padding: 0.8vw 2.4vw;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2vw;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnNewsPaper a {
+    text-decoration: none;
+    color: #081f20;
+    font-size: 1vw;
+    font-family: 'Avenir';
+    font-weight: 800;
+    text-align: left;
+
+}
+
+.btnNewsPaper .btnIcon {
+    width: 2.3vw;
+    margin: 0 2vw 0 0;
+}
+
+.btnRebel,
+.btnImpact,
+.btnSience {
+    display: none;
+}
+
+.btnImpact {
+    width: 64%;
+}
+
+
 @media all and (max-width:1440px) {
     .main .poster {
         width: 15vw;
         height: 21vw;
     }
 }
-@media all and (max-width:1024px)
-{
+
+@media all and (max-width:1024px) {
     .main .poster {
-    width: 19vw;
-    height: 21vw;
-}
+        width: 19vw;
+        height: 21vw;
+    }
 }
 
 @media all and (max-width:768px) {
@@ -219,6 +269,14 @@ section.modalWindow section.modalWrapper {
 
     section.modalWindow section.modalWrapper {
         flex-direction: column;
+    }
+    .btnNewsPaper .btnIcon {
+    width: 4.3vw;
+    margin: 0 2vw 0 0;
+}
+
+    .btnNewsPaper a {
+        font-size: 2vw;
     }
 
     .carousel {
@@ -280,9 +338,12 @@ section.modalWindow section.modalWrapper {
     .modalImg {
         background-repeat: no-repeat;
         background-size: contain;
-        width: 44%;
-        height: 40vh;
+        width: 46%;
         transition: all 2s;
+    }
+
+    .modalWripperImg {
+        height: 61%;
     }
 
     .main .posterR,
